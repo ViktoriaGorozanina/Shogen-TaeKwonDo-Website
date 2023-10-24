@@ -1,0 +1,32 @@
+@use "../utils/colors" as c;
+@use "../utils/fonts" as f;
+
+body {
+  font-family: f.$font;
+  font-weight: 400;
+  line-height: 1.6;
+  color: c.$black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  // margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Onest", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: #1a1a1a;
@@ -24,7 +24,7 @@ p {
 a,
 a:visited,
 a:active {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 *,
@@ -104,19 +104,84 @@ select {
   margin: 0 auto;
 }
 
-.grid {
-  max-width: 80vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  grid-template-rows: auto auto;
-  margin: 0 auto;
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: 2fr 1fr;
+.flex__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav {
+  background-color: #1a1a1a;
+  color: white;
+  height: 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav__placement {
+  width: 95vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav__logo {
+  min-width: 27rem;
+  margin-left: 0.5rem;
+}
+.nav__logo--icon {
+  height: 2.8rem;
+  width: auto;
+}
+.nav__logo--text {
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b49b56), color-stop(30%, #cbb989), color-stop(60%, #9f8642));
+  background: linear-gradient(to right, #b49b56 10%, #cbb989 30%, #9f8642 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  margin-left: 1.8rem;
+  font-weight: 700;
+}
+
+.menu {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 80rem;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-right: 1.25rem;
+  margin-left: 1rem;
+}
+@media (max-width: 1125px) {
+  .menu {
+    min-width: 70rem;
   }
 }
-.grid__main, .grid__aside {
-  padding: 4rem;
+.menu__item {
+  color: white;
+  margin-left: 1rem;
+  -webkit-transition: color, 0.2s;
+  transition: color, 0.2s;
+}
+.menu__item:hover {
+  color: #b49b56;
+}
+.menu__item:active {
+  -webkit-transition: none;
+  transition: none;
+  color: #9f8642;
+}
+.menu__item--current {
+  color: #cbb989;
 }

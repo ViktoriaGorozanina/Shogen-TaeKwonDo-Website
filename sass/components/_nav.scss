@@ -1,0 +1,70 @@
+@use "../utils/colors" as c;
+
+.nav {
+  background-color: c.$black;
+  color: white;
+  height: 6rem;
+  justify-content: center;
+  //   position: fixed;
+
+  &__placement {
+    width: 95vw;
+    // background-color: grey;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    min-width: 27rem;
+    margin-left: 0.5rem;
+    &--icon {
+      height: 2.8rem;
+      width: auto;
+    }
+
+    &--text {
+      background: linear-gradient(
+        to right,
+        c.$gold 10%,
+        c.$gold-light 30%,
+        c.$gold-dark 60%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      margin-left: 1.8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.menu {
+  justify-content: space-between;
+  min-width: 80rem;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-right: 1.25rem;
+  margin-left: 1rem;
+
+  @media (max-width: 1125px) {
+    min-width: 70rem;
+  }
+  &__item {
+    color: white;
+    margin-left: 1rem;
+    transition: color, 0.2s;
+
+    &:hover {
+      color: c.$gold;
+    }
+    &:active {
+      transition: none;
+      color: c.$gold-dark;
+    }
+
+    &--current {
+      color: c.$gold-light;
+    }
+  }
+}

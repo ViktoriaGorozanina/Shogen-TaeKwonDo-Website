@@ -31,7 +31,7 @@
       height="32px" />
     <style>
       .nav__logo--icon {
-        height: 26px;
+        height: 30px;
         width: auto;
       }
     </style>
@@ -40,8 +40,8 @@
   </head>
 
   <body>
-    <div class="nav flex" role>
-      <div class="nav__placement flex">
+    <div class="header flex" role>
+      <div class="nav flex">
         <a href="/index.html" class="nav__logo flex">
           <img
             class="nav__logo--icon"
@@ -64,7 +64,17 @@
             <li><a class="menu__item" href="#">Контакт</a></li>
           </ul>
         </nav>
+
+        <a href="#" class="ham-nav hidden">
+          <div class="ham-nav__icon">
+            <div class="ham-nav__el ham-nav__el--top down rotate"></div>
+            <div class="ham-nav__el ham-nav__el--middle"></div>
+            <div class="ham-nav__el ham-nav__el--bottom up rotate"></div>
+          </div>
+        </a>
       </div>
     </div>
+
+    <div class="hamnav-menu"></div>
   </body>
 </html>

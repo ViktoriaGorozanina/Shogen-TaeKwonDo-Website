@@ -1,17 +1,18 @@
 @use "../utils/colors" as c;
 
-.nav {
+.header {
   background-color: c.$black;
   color: white;
-  height: 5.2rem;
+  height: 6.8rem;
   justify-content: center;
-  //   position: fixed;
+  position: relative;
+}
 
-  &__placement {
-    width: 95vw;
-    // background-color: grey;
-    justify-content: space-between;
-  }
+.nav {
+  // background-color: grey;
+  width: 95vw;
+  justify-content: space-between;
+  //   position: fixed;
 
   &__logo {
     min-width: 27rem;
@@ -23,7 +24,7 @@
 
     &--text {
       color: transparent;
-      font-size: 2.6rem;
+      font-size: 3rem;
       text-transform: uppercase;
       margin-left: 1.4rem;
       font-weight: 700;
@@ -42,8 +43,8 @@
 .menu {
   // background-color: pink;
   justify-content: space-between;
-  min-width: 80rem;
-  font-size: 1.8rem;
+  min-width: 85rem;
+  font-size: 2rem;
   font-weight: 300;
   padding-right: 1.25rem;
   // margin-left: 1rem;
@@ -67,5 +68,74 @@
       transition: none;
       color: c.$gold-dark;
     }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+//---------------HAM NAV
+.ham-nav {
+  position: end;
+  margin-right: 1.6rem;
+  &__icon {
+    height: 20px;
+    width: 25px;
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__el {
+    background-color: white;
+    height: 2.6px;
+    width: 26px;
+    border-radius: 1px;
+
+    &--top {
+      // background-color: green;
+      animation: top-el 0.3s ease forwards;
+    }
+
+    &--middle {
+      transition: opacity 0.03s;
+    }
+
+    &--bottom {
+      animation: bottom-el 0.3s ease forwards;
+    }
+  }
+}
+
+//------------HAM NAV icon animation
+.ham-nav {
+  &__el {
+    &--middle {
+      opacity: 0;
+    }
+  }
+}
+@keyframes top-el {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+}
+
+@keyframes bottom-el {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
   }
 }

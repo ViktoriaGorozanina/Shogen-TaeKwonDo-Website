@@ -119,15 +119,17 @@ select {
           flex-direction: column;
 }
 
-.nav {
+.header {
   background-color: #1a1a1a;
   color: white;
-  height: 5.2rem;
+  height: 6.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
-.nav__placement {
+
+.nav {
   width: 95vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -139,7 +141,7 @@ select {
 }
 .nav__logo--text {
   color: transparent;
-  font-size: 2.6rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin-left: 1.4rem;
   font-weight: 700;
@@ -153,8 +155,8 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-width: 80rem;
-  font-size: 1.8rem;
+  min-width: 85rem;
+  font-size: 2rem;
   font-weight: 300;
   padding-right: 1.25rem;
   -webkit-margin-start: 1rem;
@@ -181,4 +183,107 @@ select {
   -webkit-transition: none;
   transition: none;
   color: #9f8642;
+}
+
+.hidden {
+  display: none;
+}
+
+.ham-nav {
+  position: end;
+  margin-right: 1.6rem;
+}
+.ham-nav__icon {
+  height: 20px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.ham-nav__el {
+  background-color: white;
+  height: 2.6px;
+  width: 26px;
+  border-radius: 1px;
+}
+.ham-nav__el--top {
+  -webkit-animation: top-el 0.3s ease forwards;
+          animation: top-el 0.3s ease forwards;
+}
+.ham-nav__el--middle {
+  -webkit-transition: opacity 0.03s;
+  transition: opacity 0.03s;
+}
+.ham-nav__el--bottom {
+  -webkit-animation: bottom-el 0.3s ease forwards;
+          animation: bottom-el 0.3s ease forwards;
+}
+
+.ham-nav__el--middle {
+  opacity: 0;
+}
+
+@-webkit-keyframes top-el {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(8.7px) rotate(0deg);
+            transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    -webkit-transform: translateY(8.7px) rotate(45deg);
+            transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+}
+
+@keyframes top-el {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(8.7px) rotate(0deg);
+            transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    -webkit-transform: translateY(8.7px) rotate(45deg);
+            transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+}
+@-webkit-keyframes bottom-el {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-8.7px) rotate(0deg);
+            transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    -webkit-transform: translateY(-8.7px) rotate(-45deg);
+            transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
+  }
+}
+@keyframes bottom-el {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-8.7px) rotate(0deg);
+            transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    -webkit-transform: translateY(-8.7px) rotate(-45deg);
+            transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
+  }
 }

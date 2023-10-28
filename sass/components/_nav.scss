@@ -80,6 +80,7 @@
 }
 
 //---------------HAM NAV
+//ICON
 .ham-nav {
   position: end;
   margin-right: 1.6rem;
@@ -107,13 +108,16 @@
   }
 }
 .top-transform {
-  animation: top-el 0.3s ease forwards;
+  animation: top-el 0.4s ease forwards;
 }
 .top-reverse {
-  animation: top-el-reverse 0.3s ease forwards;
+  animation: top-el-reverse 0.4s ease forwards;
 }
 .bottom-transform {
-  animation: bottom-el 0.3s ease forwards;
+  animation: bottom-el 0.4s ease forwards;
+}
+.bottom-reverse {
+  animation: bottom-el-reverse 0.4s ease forwards;
 }
 
 //------------HAM NAV icon animation
@@ -132,6 +136,18 @@
     transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
   }
 }
+@keyframes top-el-reverse {
+  0% {
+    transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+  50% {
+    transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 
 @keyframes bottom-el {
   0% {
@@ -144,11 +160,25 @@
     transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
   }
 }
+@keyframes bottom-el-reverse {
+  0% {
+    transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
+  }
+  50% {
+    transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 
-///HAM MENU START
+///HAM MENU LIST -->
 .ham-menu {
   background-color: c.$black;
-  // display: flex;
+
+  position: absolute;
+  top: 6.8rem;
+
   align-content: end;
   width: 100vw;
   font-size: 2rem;
@@ -157,7 +187,7 @@
   transition: height 0.4s;
 
   &__list {
-    padding-top: 1rem;
+    padding-top: 1.6rem;
     // background-color: red;
     display: flex;
     flex-direction: column;
@@ -193,16 +223,3 @@
   }
 }
 ///HAM MENU END
-
-// /// Blur
-// .blur {
-//   height: 100%;
-//   width: 100%;
-//   background-color: rgba(255, 255, 255, 0.8);
-//   z-index: -1;
-//   backdrop-filter: blur(2.2px);
-//   // display: none;
-//   visibility: hidden;
-//   transition: all 0.4s;
-//   opacity: 0;
-// }

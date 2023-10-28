@@ -2,6 +2,7 @@
 
 .header {
   background-color: c.$black;
+  width: 100%;
   color: white;
   height: 6.8rem;
   justify-content: center;
@@ -46,21 +47,24 @@
   min-width: 85rem;
   font-size: 2rem;
   font-weight: 300;
-  padding-right: 1.25rem;
-  // margin-left: 1rem;
   margin-inline-start: 1rem;
 
-  @media (max-width: 1125px) {
+  @media (max-width: 1230px) {
     min-width: 70rem;
   }
+  @media (max-width: 1050px) {
+    display: none;
+  }
+
+  &__item[aria-current="page"] {
+    color: c.$gold-light;
+  }
+
   &__item {
     color: white;
     margin-left: 1rem;
     transition: color, 0.2s;
 
-    &_item[aria-current="page"] {
-      color: c.$gold-light;
-    }
     &:hover {
       color: c.$gold;
     }
@@ -82,40 +86,41 @@
   &__icon {
     height: 20px;
     width: 25px;
-    // background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   &__el {
     background-color: white;
-    height: 2.6px;
+    height: 2.4px;
     width: 26px;
     border-radius: 1px;
-
-    &--top {
-      // background-color: green;
-      animation: top-el 0.3s ease forwards;
-    }
+    transition: all 0.3s;
 
     &--middle {
-      transition: opacity 0.03s;
-    }
-
-    &--bottom {
-      animation: bottom-el 0.3s ease forwards;
+      transition: opacity 0.05s;
     }
   }
+
+  @media (min-width: 1050px) {
+    display: none;
+  }
+}
+.top-transform {
+  animation: top-el 0.3s ease forwards;
+}
+.top-reverse {
+  animation: top-el-reverse 0.3s ease forwards;
+}
+.bottom-transform {
+  animation: bottom-el 0.3s ease forwards;
 }
 
 //------------HAM NAV icon animation
-.ham-nav {
-  &__el {
-    &--middle {
-      opacity: 0;
-    }
-  }
+.fade {
+  opacity: 0;
 }
+
 @keyframes top-el {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -139,3 +144,65 @@
     transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
   }
 }
+
+///HAM MENU START
+.ham-menu {
+  background-color: c.$black;
+  // display: flex;
+  align-content: end;
+  width: 100vw;
+  font-size: 2rem;
+  font-weight: 300;
+  height: 0rem;
+  transition: height 0.4s;
+
+  &__list {
+    padding-top: 1rem;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  &__item[aria-current="page"] {
+    color: c.$gold-light;
+  }
+
+  &__item {
+    color: white;
+    transition: color 0.2s;
+
+    &:hover {
+      color: c.$gold;
+    }
+    &:active {
+      transition: none;
+      color: c.$gold-dark;
+    }
+  }
+}
+
+.ham-open {
+  height: 38rem;
+  &__list {
+    opacity: 1;
+  }
+}
+///HAM MENU END
+
+// /// Blur
+// .blur {
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgba(255, 255, 255, 0.8);
+//   z-index: -1;
+//   backdrop-filter: blur(2.2px);
+//   // display: none;
+//   visibility: hidden;
+//   transition: all 0.4s;
+//   opacity: 0;
+// }

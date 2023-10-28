@@ -60,8 +60,8 @@ figure,
 blockquote,
 dl,
 dd {
-  -webkit-margin-after: 2.4rem;
-          margin-block-end: 2.4rem;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -121,6 +121,7 @@ select {
 
 .header {
   background-color: #1a1a1a;
+  width: 100%;
   color: white;
   height: 6.8rem;
   -webkit-box-pack: center;
@@ -158,23 +159,27 @@ select {
   min-width: 85rem;
   font-size: 2rem;
   font-weight: 300;
-  padding-right: 1.25rem;
   -webkit-margin-start: 1rem;
           margin-inline-start: 1rem;
 }
-@media (max-width: 1125px) {
+@media (max-width: 1230px) {
   .menu {
     min-width: 70rem;
   }
+}
+@media (max-width: 1050px) {
+  .menu {
+    display: none;
+  }
+}
+.menu__item[aria-current=page] {
+  color: #cbb989;
 }
 .menu__item {
   color: white;
   margin-left: 1rem;
   -webkit-transition: color, 0.2s;
   transition: color, 0.2s;
-}
-.menu__item_item[aria-current=page] {
-  color: #cbb989;
 }
 .menu__item:hover {
   color: #b49b56;
@@ -209,24 +214,38 @@ select {
 }
 .ham-nav__el {
   background-color: white;
-  height: 2.6px;
+  height: 2.4px;
   width: 26px;
   border-radius: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.ham-nav__el--top {
+.ham-nav__el--middle {
+  -webkit-transition: opacity 0.05s;
+  transition: opacity 0.05s;
+}
+@media (min-width: 1050px) {
+  .ham-nav {
+    display: none;
+  }
+}
+
+.top-transform {
   -webkit-animation: top-el 0.3s ease forwards;
           animation: top-el 0.3s ease forwards;
 }
-.ham-nav__el--middle {
-  -webkit-transition: opacity 0.03s;
-  transition: opacity 0.03s;
+
+.top-reverse {
+  -webkit-animation: top-el-reverse 0.3s ease forwards;
+          animation: top-el-reverse 0.3s ease forwards;
 }
-.ham-nav__el--bottom {
+
+.bottom-transform {
   -webkit-animation: bottom-el 0.3s ease forwards;
           animation: bottom-el 0.3s ease forwards;
 }
 
-.ham-nav__el--middle {
+.fade {
   opacity: 0;
 }
 
@@ -286,4 +305,55 @@ select {
     -webkit-transform: translateY(-8.7px) rotate(-45deg);
             transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
   }
+}
+.ham-menu {
+  background-color: #1a1a1a;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  width: 100vw;
+  font-size: 2rem;
+  font-weight: 300;
+  height: 0rem;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+}
+.ham-menu__list {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.ham-menu__item[aria-current=page] {
+  color: #cbb989;
+}
+.ham-menu__item {
+  color: white;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.ham-menu__item:hover {
+  color: #b49b56;
+}
+.ham-menu__item:active {
+  -webkit-transition: none;
+  transition: none;
+  color: #9f8642;
+}
+
+.ham-open {
+  height: 38rem;
+}
+.ham-open__list {
+  opacity: 1;
 }

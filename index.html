@@ -36,6 +36,7 @@
       }
     </style>
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/nav.js"></script>
     <title>ShogenClub | Home</title>
   </head>
 
@@ -51,7 +52,7 @@
           <span class="nav__logo--text">Shogen Club</span>
         </a>
 
-        <nav>
+        <nav class="nav-menu">
           <ul role="list" class="menu flex">
             <li>
               <a aria-current="page" class="menu__item" href="#">Главная</a>
@@ -65,16 +66,29 @@
           </ul>
         </nav>
 
-        <a href="#" class="ham-nav hidden">
+        <a href="#" class="ham-nav">
           <div class="ham-nav__icon">
-            <div class="ham-nav__el ham-nav__el--top down rotate"></div>
+            <div class="ham-nav__el ham-nav__el--top"></div>
             <div class="ham-nav__el ham-nav__el--middle"></div>
-            <div class="ham-nav__el ham-nav__el--bottom up rotate"></div>
+            <div class="ham-nav__el ham-nav__el--bottom bottom-reverse"></div>
           </div>
         </a>
       </div>
     </div>
 
-    <div class="hamnav-menu"></div>
+    <div class="ham-menu">
+      <ul role="list" class="ham-menu__list">
+        <li>
+          <a aria-current="page" class="ham-menu__item" href="#">Главная</a>
+        </li>
+        <li><a class="ham-menu__item" href="#">О нас</a></li>
+        <li><a class="ham-menu__item" href="#">Расписание</a></li>
+        <li><a class="ham-menu__item" href="#">Галерея</a></li>
+        <li><a class="ham-menu__item" href="#">Тренер</a></li>
+        <li><a class="ham-menu__item" href="#">Пара</a></li>
+        <li><a class="ham-menu__item" href="#">Контакт</a></li>
+      </ul>
+    </div>
+    <div class="blur"></div>
   </body>
 </html>

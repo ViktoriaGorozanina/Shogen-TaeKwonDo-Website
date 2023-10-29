@@ -88,8 +88,17 @@
 //--------------NEWS---------
 
 .news {
+  width: 70%;
   font-size: large;
   margin: 0 auto;
   text-align: center;
   padding: 3.35rem;
+  display: flex;
+  flex-direction: column;
+
+  h2,
+  p {
+    align-self: start;
+    text-align: start;
+  }
 }

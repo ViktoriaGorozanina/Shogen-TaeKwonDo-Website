@@ -48,6 +48,7 @@
   font-size: 2rem;
   font-weight: 300;
   margin-inline-start: 1rem;
+  z-index: +10;
 
   @media (max-width: 1230px) {
     min-width: 70rem;
@@ -187,7 +188,7 @@
   height: 0rem;
   transition: height 0.4s;
 
-  @media (max-width: 1050px) {
+  @media (min-width: 1050px) {
     display: none;
   }
 

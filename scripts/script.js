@@ -63,3 +63,22 @@ document.addEventListener(`click`, function (event) {
     hamMenu.classList.remove(`ham-open`);
   }
 });
+
+//---------------FOOTER-----------------
+const visitCountText = document.querySelector(`.visit-count`);
+
+//!TEMPORARY LOCAL STORAGE PAGE VISIT COUNT (must change it to server side (node.js)website visit count)
+
+const visitCount = function () {
+  if (localStorage.visitCount) {
+    // If it exists, increment it
+    localStorage.visitCount = parseInt(localStorage.visitCount) + 1;
+  } else {
+    // If it doesn't exist, set it to 1
+    localStorage.visitCount = 1;
+  }
+
+  return localStorage.visitCount; // Return the visit count
+};
+
+visitCountText.textContent = `PAGE VISITED ${visitCount()} TIMES`;

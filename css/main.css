@@ -368,6 +368,7 @@ select {
   }
 }
 .ham-menu {
+  z-index: 10;
   background-color: #1a1a1a;
   position: absolute;
   top: 6.8rem;
@@ -419,4 +420,144 @@ select {
 }
 .ham-open__list {
   opacity: 1;
+}
+
+footer {
+  height: auto;
+  background-color: #1a1a1a;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer__div {
+  max-width: 110rem;
+  padding: 4rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5.6rem;
+}
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__links a {
+  color: white;
+  font-size: 1.8rem;
+}
+.footer__links a:hover, .footer__links a:focus {
+  color: #cbb989;
+}
+.footer__links a:active {
+  color: #9f8642;
+}
+.footer__credits {
+  border-top: white solid 1px;
+  padding-top: 1.6rem;
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.facebook__icon:hover, .facebook__icon:focus {
+  fill: #cbb989;
+}
+.facebook__icon:active {
+  fill: #9f8642;
+}
+
+@font-face {
+  font-family: Spy;
+  src: url(/Assets/SpyFont/spyagencyv3laser.ttf);
+}
+.home-banner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: pink;
+  height: auto;
+  width: 90%;
+  display: grid;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.home-banner__img {
+  height: 55vh;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 2;
+}
+.home-banner__black {
+  height: auto;
+  background-color: black;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.home-banner__gradient {
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(15%, rgb(0, 0, 0)), color-stop(60%, black));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, black 60%);
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  justify-self: end;
+  width: 68%;
+  z-index: 3;
+}
+.home-banner__text {
+  font-family: Spy, sans-serif;
+  padding-right: 6rem;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 4;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b49b56), color-stop(30%, #cbb989), color-stop(60%, #9f8642));
+  background: linear-gradient(to right, #b49b56 10%, #cbb989 30%, #9f8642 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 8rem;
+  justify-self: end;
+  align-self: center;
+}
+
+.partner-logo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.partner-logo__img {
+  height: 5.6rem;
+  width: auto;
+  opacity: 0.5;
+}
+
+.news {
+  font-size: large;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.35rem;
 }

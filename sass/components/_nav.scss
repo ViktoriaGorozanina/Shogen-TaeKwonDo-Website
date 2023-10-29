@@ -1,0 +1,230 @@
+@use "../utils/colors" as c;
+
+.header {
+  background-color: c.$black;
+  width: 100%;
+  color: white;
+  height: 6.8rem;
+  justify-content: center;
+  position: relative;
+}
+
+.nav {
+  // background-color: grey;
+  width: 95vw;
+  justify-content: space-between;
+  //   position: fixed;
+
+  &__logo {
+    min-width: 27rem;
+    margin-left: 0.5rem;
+    // &--icon {
+    //   height: 2.7rem;
+    //   width: auto;
+    // }
+
+    &--text {
+      color: transparent;
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-left: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(
+        to right,
+        c.$gold 10%,
+        c.$gold-light 30%,
+        c.$gold-dark 60%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+}
+
+.menu {
+  // background-color: pink;
+  justify-content: space-between;
+  min-width: 85rem;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-inline-start: 1rem;
+
+  @media (max-width: 1230px) {
+    min-width: 70rem;
+  }
+  @media (max-width: 1050px) {
+    display: none;
+  }
+
+  &__item[aria-current="page"] {
+    color: c.$gold-light;
+  }
+
+  &__item {
+    color: white;
+    margin-left: 1rem;
+    transition: color, 0.2s;
+
+    &:hover {
+      color: c.$gold;
+    }
+    &:active {
+      transition: none;
+      color: c.$gold-dark;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+//---------------HAM NAV
+//ICON
+.ham-nav {
+  position: end;
+  margin-right: 1.6rem;
+  &__icon {
+    height: 20px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__el {
+    background-color: white;
+    height: 2.4px;
+    width: 26px;
+    border-radius: 1px;
+    transition: all 0.3s;
+
+    &--middle {
+      transition: opacity 0.05s;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    display: none;
+  }
+}
+.top-transform {
+  animation: top-el 0.4s ease forwards;
+}
+.top-reverse {
+  animation: top-el-reverse 0.4s ease forwards;
+}
+.bottom-transform {
+  animation: bottom-el 0.4s ease forwards;
+}
+.bottom-reverse {
+  animation: bottom-el-reverse 0.4s ease forwards;
+}
+
+//------------HAM NAV icon animation
+.fade {
+  opacity: 0;
+}
+
+@keyframes top-el {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+}
+@keyframes top-el-reverse {
+  0% {
+    transform: translateY(8.7px) rotate(45deg); /* Rotate at the end of the animation */
+  }
+  50% {
+    transform: translateY(8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes bottom-el {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
+  }
+}
+@keyframes bottom-el-reverse {
+  0% {
+    transform: translateY(-8.7px) rotate(-45deg); /* Rotate at the end of the animation */
+  }
+  50% {
+    transform: translateY(-8.7px) rotate(0deg); /* Move down halfway through the animation */
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+///HAM MENU LIST -->
+.ham-menu {
+  z-index: +10;
+  background-color: c.$black;
+
+  position: absolute;
+  top: 6.8rem;
+
+  align-content: end;
+  width: 100vw;
+  font-size: 2rem;
+  font-weight: 300;
+  height: 0rem;
+  transition: height 0.4s;
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
+
+  &__list {
+    padding-top: 1.6rem;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  &__item[aria-current="page"] {
+    color: c.$gold-light;
+  }
+
+  &__item {
+    color: white;
+    transition: color 0.2s;
+
+    &:hover {
+      color: c.$gold;
+    }
+    &:active {
+      transition: none;
+      color: c.$gold-dark;
+    }
+  }
+}
+
+.ham-open {
+  height: 38rem;
+  &__list {
+    opacity: 1;
+  }
+}
+///HAM MENU END

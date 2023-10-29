@@ -1,6 +1,57 @@
-// .footer {
-//   background-color: $color-grey-dark-3;
-//   padding: 10rem 0;
-//   font-size: 1.4rem;
-//   color: $color-grey-light-1;
-// }
+@use "../utils/colors" as c;
+
+footer {
+  height: auto;
+  background-color: c.$black;
+  //   padding: 10rem 0;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer {
+  &__div {
+    max-width: 110rem;
+    padding: 4rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    // background-color: pink;
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: white;
+      font-size: 1.8rem;
+
+      &:hover,
+      &:focus {
+        color: c.$gold-light;
+      }
+      &:active {
+        color: c.$gold-dark;
+      }
+    }
+  }
+  &__credits {
+    // background-color: orange;
+    border-top: white solid 1px;
+    padding-top: 1.6rem;
+    grid-column: span 2;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+  }
+}
+.facebook__icon {
+  &:hover,
+  &:focus {
+    fill: c.$gold-light;
+  }
+  &:active {
+    fill: c.$gold-dark;
+  }
+}

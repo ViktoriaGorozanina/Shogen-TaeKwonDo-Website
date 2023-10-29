@@ -5,3 +5,13 @@
 
 $black: #1a1a1a;
 $gold: #b49b56;
+$gold-dark: #9f8642;
+$gold-light: #cbb989;
+$gold-lightest: #d2c39a;
+
+$gold-gradient: linear-gradient(
+  to right,
+  #b49b56 10%,
+  #cbb989 30%,
+  #9f8642 60%
+);

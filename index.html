@@ -4,42 +4,147 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="preload"
+      href="./css/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="/Assets/img/Favicon/tab_LOGO_diamond.svg"
+      as="image" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,200&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Onest:wght@200;400;600;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,200&family=Rubik:ital,wght@0,400;0,500;0,700;1,300;1,400;1,600&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="./css/main.css" />
     <link
       class="favicon"
       rel="shortcut icon"
       type="svg"
-      href="/Assets/img/favicon/tab_LOGO_diamond.svg" />
-
+      href="/Assets/img/favicon/tab_LOGO_diamond.svg"
+      height="32px" />
+    <style>
+      .nav__logo--icon {
+        height: 30px;
+        width: auto;
+      }
+    </style>
     <script defer src="scripts/script.js"></script>
+
     <title>ShogenClub | Home</title>
   </head>
 
   <body>
-    <div class="grid">
-      <main class="grid__main">
-        <h1>hello</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          inventore, ipsam ipsa labore molestias distinctio rem aut ducimus eos
-          porro tempore dolores libero impedit voluptatum commodi esse veniam ad
-          quo.
-        </p>
-      </main>
-      <aside class="grid__aside">
-        <h2>More info</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, esse!
-          Cum iusto, quibusdam harum magnam cumque sit! Et ipsa iste magni quis
-          cum? Aliquid doloribus alias ullam veritatis officia molestiae?
-        </p>
-      </aside>
+    <div class="header flex" role>
+      <div class="ham-menu">
+        <ul role="list" class="ham-menu__list">
+          <li>
+            <a aria-current="page" class="ham-menu__item" href="#">Главная</a>
+          </li>
+          <li><a class="ham-menu__item" href="#">О нас</a></li>
+          <li><a class="ham-menu__item" href="#">Расписание</a></li>
+          <li><a class="ham-menu__item" href="#">Галерея</a></li>
+          <li><a class="ham-menu__item" href="#">Тренер</a></li>
+          <li><a class="ham-menu__item" href="#">Пара</a></li>
+          <li><a class="ham-menu__item" href="#">Контакт</a></li>
+        </ul>
+      </div>
+
+      <div class="nav flex">
+        <a href="/index.html" class="nav__logo flex">
+          <img
+            class="nav__logo--icon"
+            src="/Assets/img/Favicon/tab_LOGO_white.svg"
+            alt="ShogenClub logo" />
+
+          <span class="nav__logo--text">Shogen Club</span>
+        </a>
+
+        <nav class="nav-menu">
+          <ul role="list" class="menu flex">
+            <li>
+              <a aria-current="page" class="menu__item" href="#">Главная</a>
+            </li>
+            <li><a class="menu__item" href="#">О нас</a></li>
+            <li><a class="menu__item" href="#">Расписание</a></li>
+            <li><a class="menu__item" href="#">Галерея</a></li>
+            <li><a class="menu__item" href="#">Тренер</a></li>
+            <li><a class="menu__item" href="#">Пара</a></li>
+            <li><a class="menu__item" href="#">Контакт</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="ham-nav">
+          <div class="ham-nav__icon">
+            <div class="ham-nav__el ham-nav__el--top"></div>
+            <div class="ham-nav__el ham-nav__el--middle"></div>
+            <div class="ham-nav__el ham-nav__el--bottom"></div>
+          </div>
+        </a>
+      </div>
     </div>
+
+    <section class="home-banner">
+      <img class="home-banner__img" src="/Assets/img/home_banner.jpg" alt="Tae Kwon Do fighter">
+
+      <div class="home-banner__black"></div>
+      <div class="home-banner__gradient"></div>
+
+     <span class="home-banner__text">Fight like a boss</span>
+    </section>
+
+    <section class="partner-logo">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-1.jpg" alt="">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-2.jpg" alt="">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-3.jpg" alt="">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-1.jpg" alt="">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-2.jpg" alt="">
+      <img class="partner-logo__img" src="/Assets/img/partner_logo-3.jpg" alt="">
+    </section>
+
+    <section class="news">
+      <h1>NEWS</h1>
+    </section>
+
+    <footer>
+      <div class="footer__div">
+        
+          <div class="footer__links">
+            <a href="#">
+              <!-- Facebook Filled icon by Icons8 -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.0"
+                x="0px"
+                y="0px"
+                width="30"
+                height="30"
+                viewBox="0 0 50 50"
+                style="null"
+                fill="white"
+                class="facebook__icon icons8-Facebook-Filled">
+                <path
+                  d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
+              </svg>
+            </a>
+            <a href="#">FAQ</a>
+            <a href="#">Партнеры</a>
+            <a href="#">Контакт</a>
+          </div>
+
+          <div class="footer__credits">
+            <span>Copyright blabla@</span>
+            <span class="visit-count">VISIT COUNT</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

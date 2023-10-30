@@ -16,6 +16,7 @@
   //   position: fixed;
 
   &__logo {
+    padding-left: min(1rem, 5%);
     min-width: 27rem;
     margin-left: 0.5rem;
     // &--icon {
@@ -24,6 +25,7 @@
     // }
 
     &--text {
+      white-space: nowrap;
       color: transparent;
       font-size: 3rem;
       text-transform: uppercase;
@@ -48,12 +50,13 @@
   font-size: 2rem;
   font-weight: 300;
   margin-inline-start: 1rem;
+  padding-right: min(1rem, 5%);
   z-index: +10;
 
   @media (max-width: 1230px) {
     min-width: 70rem;
   }
-  @media (max-width: 1050px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 
@@ -104,7 +107,7 @@
     }
   }
 
-  @media (min-width: 1050px) {
+  @media (min-width: 1100px) {
     display: none;
   }
 }
@@ -188,7 +191,7 @@
   height: 0rem;
   transition: height 0.4s;
 
-  @media (min-width: 1050px) {
+  @media (min-width: 1165px) {
     display: none;
   }
 

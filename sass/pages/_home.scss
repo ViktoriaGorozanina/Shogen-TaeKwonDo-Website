@@ -172,53 +172,96 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  @media (width <= 1200px) {
+    width: 85%;
+  }
 
   &__card {
     display: flex;
     gap: 4rem;
     margin-bottom: 8rem;
+    // background-color: pink;
 
-    @media (max-width: 900px) {
-      flex-direction: column;
-    }
-
-    &--img {
-      height: clamp(10rem, 15vw, 16rem);
-      width: auto;
+    &--img-holder {
+      min-height: 100%;
+      min-width: max(13rem, 20%);
       border-radius: 6px;
-
-      @media (max-width: 900px) {
-        margin-bottom: -1rem;
+      overflow: hidden;
+      background-image: url("/Assets/img/img_placeholder.png");
+      background-size: cover;
+      background-position: center;
+      display: block;
+      // border: 2px solid c.$black;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      @media (max-width: 800px) {
+        display: none;
+      }
+      &:active {
+        transform: translateY(2px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px,
+          rgba(0, 0, 0, 0.06) 0px 1px 2px -1px;
       }
     }
+
     &--text {
+      // background-color: skyblue;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      align-self: center;
       text-align: start;
     }
 
     &--title {
+      max-width: 80ch;
       color: c.$black;
       padding-top: 0.2rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+
+      &:active {
+        color: grey;
+      }
+    }
+
+    &--date {
+      font-size: 1.6rem;
+      color: grey;
+      margin-top: -1.6rem;
+    }
+
+    &--article {
+      max-width: 95ch;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+
+      @media (width <= 1200px) {
+        -webkit-line-clamp: 2;
+      }
     }
   }
   //--------NEWS BUTTON----------
   &__btn {
     color: white;
-    font-size: 1.6rem;
+    letter-spacing: 1.2;
+    font-size: 1.8rem;
     background-color: c.$black;
     padding: 1.2rem 2.4rem;
     border-radius: 4px;
+    transition: all 0.2s;
 
     &:hover,
     &:focus {
       color: c.$gold;
+      background-color: c.$black-light;
     }
     &:active {
-      transition: none;
       color: c.$gold-dark;
+      background-color: c.$black;
     }
   }
 }

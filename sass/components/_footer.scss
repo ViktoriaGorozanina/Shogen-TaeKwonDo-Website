@@ -40,12 +40,14 @@ footer {
     // background-color: orange;
     border-top: white solid 1px;
     padding-top: 1.6rem;
+    padding-bottom: 0.4rem;
     grid-column: span 2;
     display: flex;
     width: auto;
     justify-content: space-between;
   }
 }
+
 .facebook__icon {
   &:hover,
   &:focus {

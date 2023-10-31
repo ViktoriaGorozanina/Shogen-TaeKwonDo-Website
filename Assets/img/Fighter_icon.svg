@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.25 114.43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 0.4rem;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <polyline class="cls-1" points="66.4 7.11 67.38 6.08 68 3.04 68.5 1.5 71.16 2.21 75.72 6.24 75.75 8.1 74.15 8.63 70.69 8.94 70.05 10.19"/>
+    <polyline class="cls-1" points="34.92 105.85 34.92 108.7 33.5 110.21 32.86 111.7 35.32 112.93 41.41 112.93 42.66 111.56 41.81 110.09 39.29 108.74 40.1 105.17"/>
+    <path class="cls-1" d="M36.47,35.91l-4.31-4.42,6.58,2.11m-28.95-4.1l-7.67,11.66,7.12,18.15,8.67-2.42,1.09-8.87,8.02,8.22m18.86-29.9l-19.77-6.1-8.54,2.98"/>
+    <polygon class="cls-1" points="34.92 37.49 65.53 6.37 72.9 12.6 50.15 54.93 43.42 104.73 33.78 106 27.4 55.26 34.92 37.49"/>
+    <rect class="cls-2" x="19.29" y="44.27" width="24.48" height="3" transform="translate(-22.87 57.17) rotate(-67.27)"/>
+    <circle class="cls-2" cx="30.75" cy="47.65" r="3.23"/>
+    <rect class="cls-2" x="32.49" y="47.98" width="3" height="21.13" transform="translate(-12.67 9.5) rotate(-13.43)"/>
+    <rect class="cls-2" x="17.34" y="58.78" width="21.13" height="3" transform="translate(-36.93 74.73) rotate(-77.73)"/>
+    <polygon class="cls-2" points="31.58 44.42 19.79 37.57 19.18 35.48 16.35 35.57 8.78 31.17 10.29 28.58 33.08 41.83 31.58 44.42"/>
+    <polygon class="cls-2" points="24.76 40.49 16.51 24.82 18.88 22.87 27.41 39.09 24.76 40.49"/>
+    <path class="cls-1" d="M15.14,28.99c3.04-1.56,3.33-9.35,.3-14.02-2.14-3.31-7.42-5.15-10.74-3.27S.48,18.88,2.76,23.31c1.38,2.68,6.47,8.71,12.38,5.68Z"/>
+    <polyline class="cls-1" points="14.18 39.07 13.07 36.65 14.57 34.43 19.27 34.95 20.71 36.62 18.79 39.54"/>
+    <polyline class="cls-1" points="2.1 41.17 9.23 59.32 17.9 56.91 20.02 39.66 12.92 38.94 11.19 46.64"/>
+  </g>
+</svg>

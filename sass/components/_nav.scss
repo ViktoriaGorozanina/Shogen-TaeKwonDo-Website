@@ -4,7 +4,7 @@
   background-color: c.$black;
   width: 100%;
   color: white;
-  height: 6.8rem;
+  height: 8rem;
   justify-content: center;
   position: relative;
 }
@@ -69,7 +69,8 @@
     margin-left: 1rem;
     transition: color, 0.2s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: c.$gold;
     }
     &:active {
@@ -204,7 +205,7 @@
     gap: 1.6rem;
 
     opacity: 0;
-    transition: opacity 0.6s;
+    transition: opacity 0.2s;
   }
 
   &__item[aria-current="page"] {
@@ -229,6 +230,7 @@
   height: 38rem;
   &__list {
     opacity: 1;
+    transition: all 0.9s;
   }
 }
 ///HAM MENU END

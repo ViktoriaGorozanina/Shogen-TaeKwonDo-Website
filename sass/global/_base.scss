@@ -6,7 +6,8 @@
   box-sizing: inherit;
 }
 
-
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
 }

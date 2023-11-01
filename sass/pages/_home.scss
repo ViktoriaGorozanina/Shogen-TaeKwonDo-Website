@@ -271,7 +271,7 @@
 //--------------ACHIEVEMENTS---------
 .achievements {
   background-color: c.$black;
-  height: 52rem;
+  height: 46rem;
   width: 100%;
   margin-bottom: 16rem;
   display: grid;
@@ -304,6 +304,83 @@
     &--text {
       color: white;
       font-weight: 1.6rem;
+    }
+  }
+}
+
+//--------------SUBSCRIBE---------
+.subscribe {
+  &__div {
+    height: 80rem;
+  }
+}
+
+//--------------ABOUT US---------
+.about-us {
+  // background-color: pink;
+  // height: 62rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  margin-bottom: 16rem;
+  position: relative;
+  &__block {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: c.$black;
+    border-radius: 0 4px 4px 0;
+
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 10rem;
+    //   right: 48vw;
+    //   height: 38rem;
+    //   width: 62rem;
+    //   border: 2px solid c.$gold;
+    //   border-radius: 4px;
+    // }
+  }
+  &__img {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    z-index: +10;
+    border-radius: 4px;
+    max-height: 42rem;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    margin-left: 2rem;
+    overflow: hidden;
+  }
+
+  &__content {
+    // background-color: yellow;
+    padding: min(8rem, 6vw);
+    color: c.$black;
+    display: grid;
+
+    &--title {
+      font-size: 3.2rem;
+      margin-bottom: 4rem;
+    }
+
+    &--story {
+      max-width: 50ch;
+      font-size: min(1.8rem, 1.9vw, 2rem);
+      margin-bottom: 6rem;
+    }
+
+    &--btn {
+      color: grey;
+      white-space: nowrap;
+      font-size: 1.6rem;
+      padding: 0.5rem;
+      width: 18%;
     }
   }
 }

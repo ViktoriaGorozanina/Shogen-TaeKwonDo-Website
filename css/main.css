@@ -785,7 +785,7 @@ footer {
 
 .achievements {
   background-color: #1a1a1a;
-  height: 52rem;
+  height: 46rem;
   width: 100%;
   margin-bottom: 16rem;
   display: grid;
@@ -829,4 +829,58 @@ footer {
 .achievements__content--text {
   color: white;
   font-weight: 1.6rem;
+}
+
+.subscribe__div {
+  height: 80rem;
+}
+
+.about-us {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  margin-bottom: 16rem;
+  position: relative;
+}
+.about-us__block {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  background-color: #1a1a1a;
+  border-radius: 0 4px 4px 0;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  margin-right: 5rem;
+}
+.about-us__img {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  z-index: 10;
+  border-radius: 4px;
+  max-height: 42rem;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  margin-left: 2rem;
+  overflow: hidden;
+}
+.about-us__content {
+  padding: min(8rem, 6vw);
+  color: #1a1a1a;
+  display: grid;
+}
+.about-us__content--title {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+}
+.about-us__content--story {
+  max-width: 50ch;
+  font-size: min(1.8rem, 1.9vw, 2rem);
+  margin-bottom: 6rem;
+}
+.about-us__content--btn {
+  color: grey;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  width: 18%;
 }

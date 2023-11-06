@@ -1,4 +1,5 @@
 @use "../utils/colors" as c;
+@use "../utils/fonts" as f;
 
 @font-face {
   font-family: Spy;
@@ -70,6 +71,7 @@
     font-size: clamp(3rem, 3.85vw, 9rem);
     text-align: end;
     width: min(110rem, 50vw);
+    text-wrap: balance;
 
     font-family: Spy, Verdana, Geneva, Tahoma, sans-serif;
     grid-column: 1 / -1;
@@ -164,6 +166,7 @@
 //--------------NEWS---------
 
 .news {
+  font-family: f.$fontRoboto;
   width: 70%;
   font-size: large;
   margin: 0 auto;
@@ -185,6 +188,7 @@
     &--img-holder {
       min-height: 100%;
       min-width: max(13rem, 20%);
+      aspect-ratio: 16 / 9;
       border-radius: 6px;
       overflow: hidden;
       background-image: url("/Assets/img/img_placeholder.png");
@@ -310,8 +314,39 @@
 
 //--------------SUBSCRIBE---------
 .subscribe {
+  // font-family: f.$fontRoboto;
+  margin-bottom: 8rem;
+
   &__div {
-    height: 80rem;
+    // background-color: yellow;
+    max-width: 130rem;
+    height: 70rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+  }
+  &__form {
+    padding-left: 2.6rem;
+    align-self: center;
+    height: 90%;
+    // background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--title {
+      font-size: 4rem;
+      margin-bottom: 6rem;
+    }
+  }
+  &__logo {
+    // background-color: skyblue;
+    opacity: 0.2;
+    height: 70%;
+    align-self: center;
+    background-image: url(/Assets/img/shogen_club_logoSVG.svg);
+    background-repeat: no-repeat;
   }
 }
 
@@ -336,7 +371,7 @@
     grid-row: 1 / -1;
 
     background-color: c.$black;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 6px 6px 0;
     position: relative;
 
     margin-top: 8rem;
@@ -351,7 +386,7 @@
     }
 
     &--img {
-      border-radius: 4px;
+      border-radius: 6px;
       max-width: 70%;
       min-width: 50rem;
       height: auto;

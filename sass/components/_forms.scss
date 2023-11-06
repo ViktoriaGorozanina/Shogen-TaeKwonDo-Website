@@ -1,0 +1,40 @@
+@use "../utils/colors" as c;
+
+form {
+  font-size: 1.8rem;
+  color: c.$black;
+}
+
+input {
+  padding: 2rem 3rem 0.3rem 0.5rem;
+  border: none;
+  border-bottom: solid 1px black;
+  background-color: none;
+}
+input::placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+input[type="submit"] {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.2;
+  font-size: 1.8rem;
+  background-color: c.$black;
+  padding: 1.2rem 4rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    color: c.$gold;
+    background-color: c.$black-light;
+  }
+  &:active {
+    color: c.$gold-dark;
+    background-color: c.$black;
+  }
+}
+label {
+  margin-bottom: -2rem;
+}

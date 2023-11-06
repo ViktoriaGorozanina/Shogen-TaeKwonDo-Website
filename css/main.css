@@ -27,6 +27,7 @@ a:active {
   text-decoration: none !important;
 }
 
+/* Box sizing rules */
 *,
 *::after,
 *::before {
@@ -34,21 +35,6 @@ a:active {
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -82,6 +68,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -130,7 +118,7 @@ select {
   background-color: #1a1a1a;
   width: 100%;
   color: white;
-  height: 8rem;
+  height: 6.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -168,6 +156,7 @@ select {
   min-width: 85rem;
   font-size: 2rem;
   font-weight: 300;
+  letter-spacing: 0.5px;
   -webkit-margin-start: 1rem;
           margin-inline-start: 1rem;
   padding-right: min(1rem, 5%);
@@ -502,6 +491,67 @@ footer {
   fill: #9f8642;
 }
 
+form {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+}
+
+input {
+  padding: 2rem 3rem 0.3rem 0.5rem;
+  border: none;
+  border-bottom: solid 1px black;
+  background-color: none;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+
+input::-moz-placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+
+input::placeholder {
+  font-weight: 200;
+  color: lightgrey;
+}
+
+input[type=submit] {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.2;
+  font-size: 1.8rem;
+  background-color: #1a1a1a;
+  padding: 1.2rem 4rem;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+input[type=submit]:hover, input[type=submit]:focus {
+  color: #b49b56;
+  background-color: #2a2929;
+}
+input[type=submit]:active {
+  color: #9f8642;
+  background-color: #1a1a1a;
+}
+
+label {
+  margin-bottom: -2rem;
+}
+
 @font-face {
   font-family: Spy;
   src: url(/Assets/SpyFont/spyagencyv3laser.ttf);
@@ -563,6 +613,7 @@ footer {
   font-size: clamp(3rem, 3.85vw, 9rem);
   text-align: end;
   width: min(110rem, 50vw);
+  text-wrap: balance;
   font-family: Spy, Verdana, Geneva, Tahoma, sans-serif;
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -672,6 +723,7 @@ footer {
 }
 
 .news {
+  font-family: "Roboto", sans-serif;
   width: 70%;
   font-size: large;
   margin: 0 auto;
@@ -701,6 +753,7 @@ footer {
 .news__card--img-holder {
   min-height: 100%;
   min-width: max(13rem, 20%);
+  aspect-ratio: 16/9;
   border-radius: 6px;
   overflow: hidden;
   background-image: url("/Assets/img/img_placeholder.png");
@@ -831,8 +884,44 @@ footer {
   font-weight: 1.6rem;
 }
 
+.subscribe {
+  margin-bottom: 8rem;
+}
 .subscribe__div {
-  height: 80rem;
+  max-width: 130rem;
+  height: 70rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+}
+.subscribe__form {
+  padding-left: 2.6rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.subscribe__form--title {
+  font-size: 4rem;
+  margin-bottom: 6rem;
+}
+.subscribe__logo {
+  opacity: 0.2;
+  height: 70%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-image: url(/Assets/img/shogen_club_logoSVG.svg);
+  background-repeat: no-repeat;
 }
 
 .about-us {
@@ -859,7 +948,7 @@ footer {
   grid-column: 1/2;
   grid-row: 1/-1;
   background-color: #1a1a1a;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   position: relative;
   margin-top: 8rem;
   margin-bottom: 5rem;
@@ -874,7 +963,7 @@ footer {
   }
 }
 .about-us__block--img {
-  border-radius: 4px;
+  border-radius: 6px;
   max-width: 70%;
   min-width: 50rem;
   height: auto;

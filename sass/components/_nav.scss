@@ -4,7 +4,7 @@
   background-color: c.$black;
   width: 100%;
   color: white;
-  height: 8rem;
+  height: 6.8rem;
   justify-content: center;
   position: relative;
 }
@@ -49,6 +49,7 @@
   min-width: 85rem;
   font-size: 2rem;
   font-weight: 300;
+  letter-spacing: 0.5px;
   margin-inline-start: 1rem;
   padding-right: min(1rem, 5%);
   z-index: +10;

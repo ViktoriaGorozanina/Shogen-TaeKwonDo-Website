@@ -11,6 +11,8 @@
 }
 
 .social__icon {
+  transition: all 0.2s;
+
   &:hover,
   &:focus {
     fill: c.$gold-light;

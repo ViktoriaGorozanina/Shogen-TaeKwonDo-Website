@@ -9,8 +9,8 @@
     margin-top: calc(6rem + 5vw);
     // margin-inline: 1.6rem;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: calc(1.4rem + 5vw);
+    grid-template-columns: 1.7fr 1fr;
+    gap: calc(1rem + 4vw);
     min-width: 80rem;
     width: 70vw;
 
@@ -22,13 +22,14 @@
 
       &-cell {
         &-message {
-          //   background-color: c.$gold-light3;
+          background-color: c.$gold-light3;
           word-wrap: break-word;
           resize: vertical;
           border: none;
           border-radius: 3px;
-          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+          //   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
           padding: 1rem 3rem 1.19rem 1rem;
+          font-size: 2rem;
 
           &:focus {
             border: none;
@@ -43,12 +44,13 @@
         margin-bottom: 2rem;
       }
       //   background-color: beige;
+      white-space: nowrap;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       font-size: 2.2rem;
-      padding-left: 5vw;
-      padding-top: 10rem;
+      padding-left: 3vw;
+      padding-top: 11rem;
     }
     &--social {
       margin-top: 4rem;

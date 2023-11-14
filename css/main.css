@@ -103,6 +103,33 @@ main {
   min-height: 100vh;
 }
 
+/* Track */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+
+/* Handle when the mouse is down */
+::-webkit-scrollbar-thumb:active {
+  background-color: #666;
+}
+
 .container {
   padding: 0 1.5;
   max-width: 62.5 rem;
@@ -514,10 +541,12 @@ input {
   background-color: none;
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
+  font-size: 2.2rem;
 }
 input:focus {
-  border: none;
-  padding: 1.19rem 3rem 1.19rem 1rem;
+  border: 1px solid black;
+  outline: none;
+  padding: 1.14rem 3rem 1.14rem 1rem;
 }
 
 input::-webkit-input-placeholder {
@@ -578,6 +607,10 @@ input[type=submit]:active {
   outline-color: transparent;
 }
 
+.social__icon {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
 .social__icon:hover, .social__icon:focus {
   fill: #cbb989;
 }
@@ -1130,8 +1163,8 @@ input[type=submit]:active {
 .contact__info {
   margin-top: calc(6rem + 5vw);
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: calc(1.4rem + 5vw);
+  grid-template-columns: 1.7fr 1fr;
+  gap: calc(1rem + 4vw);
   min-width: 80rem;
   width: 70vw;
 }
@@ -1140,19 +1173,20 @@ input[type=submit]:active {
   margin-bottom: 6rem;
 }
 .contact__info--form-cell-message {
+  background-color: #f8f5ee;
   word-wrap: break-word;
   resize: vertical;
   border: none;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
-          box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
   padding: 1rem 3rem 1.19rem 1rem;
+  font-size: 2rem;
 }
 .contact__info--form-cell-message:focus {
   border: none;
   background-color: white;
 }
 .contact__info--details {
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1162,8 +1196,8 @@ input[type=submit]:active {
           flex-direction: column;
   gap: 2rem;
   font-size: 2.2rem;
-  padding-left: 5vw;
-  padding-top: 10rem;
+  padding-left: 3vw;
+  padding-top: 11rem;
 }
 .contact__info--details h3 {
   margin-bottom: 2rem;

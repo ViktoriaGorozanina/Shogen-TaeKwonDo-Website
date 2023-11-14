@@ -14,10 +14,13 @@ input {
   border-bottom: solid 1px black;
   background-color: none;
   transition: padding 0.2s;
+  font-size: 2.2rem;
 
   &:focus {
-    border: none;
-    padding: 1.19rem 3rem 1.19rem 1rem;
+    // border: none;
+    border: 1px solid black;
+    outline: none;
+    padding: 1.14rem 3rem 1.14rem 1rem;
   }
 }
 input::placeholder {

@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport"content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color"  content="#000">
 
     <link
       rel="preload"
-      href="./css/main.css"
+      href="/css/main.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
     <link
@@ -15,7 +16,7 @@
       href="/Assets/img/Favicon/tab_LOGO_diamond.svg"
       as="image" />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,15 +36,17 @@
         width: auto;
       }
     </style>
-    <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/pages/home.js"></script>
+    <script type="module" src="script.js"></script>
+
+
+    <link rel="preload" href="" as="image" fetchpriority=high>
 
     <title>ShogenClub | Home</title>
   </head>
 
   <body>
       <!-- --------------------NAV--------------------- -->
-    <div class="header flex" role>
+    <div class="header flex" role="navigation">
       <div class="ham-menu">
         <ul role="list" class="ham-menu__list">
           <li>
@@ -54,12 +57,12 @@
           <li><a class="ham-menu__item" href="#">Галерея</a></li>
           <li><a class="ham-menu__item" href="#">Тренер</a></li>
           <li><a class="ham-menu__item" href="#">Para TKD</a></li>
-          <li><a class="ham-menu__item" href="#">Контакт</a></li>
+          <li><a class="ham-menu__item" href="contact.html">Контакт</a></li>
         </ul>
       </div>
 
       <div class="nav flex">
-        <a href="/index.html" class="nav__logo flex">
+        <a href="index.html" class="nav__logo flex">
           <img
             class="nav__logo--icon"
             src="/Assets/img/Favicon/tab_LOGO_white.svg"
@@ -71,7 +74,7 @@
         <nav class="nav-menu">
           <ul role="list" class="menu flex">
             <li>
-              <a aria-current="page" class="menu__item" href="/index.html"
+              <a aria-current="page" class="menu__item" href="#"
                 >Главная</a
               >
             </li>
@@ -80,7 +83,7 @@
             <li><a class="menu__item" href="#">Галерея</a></li>
             <li><a class="menu__item" href="#">Тренер</a></li>
             <li><a class="menu__item" href="#">Para TKD</a></li>
-            <li><a class="menu__item" href="#footer">Контакт</a></li>
+            <li><a class="menu__item" href="contact.html">Контакт</a></li>
           </ul>
         </nav>
 
@@ -94,12 +97,14 @@
       </div>
     </div>
   <!-- --------------------BANNER--------------------- -->
-    <section class="home-banner">
+    <section class="home-banner" role="banner">
       <div class="home-banner__img-container">
         <img
           class="home-banner__img-container--img"
           src="/Assets/img/home_banner.jpg"
-          alt="Tae Kwon Do fighter" />
+          alt="Tae Kwon Do fighter" 
+          width="1824"
+          height="1729"/>
 
         <div class="home-banner__img-container--gradient"></div>
       </div>
@@ -148,7 +153,7 @@
         <a class="news__card--img-holder" href="#"></a>
 
         <div class="news__card--text">
-          <a href="#" class="news__card--title"><h2>Заниматься само всю, то примером, насаждений то и физическими того отвергает, нас неприятностей заниматься. </h2></a>
+          <a href="#" class="news__card--title"><h2>Заниматься само всю, то примером, то и физическими того отвергает, нас неприятностей заниматься. </h2></a>
 <span class="news__card--date"><time datetime="2023-10-07T20:00:00"><i>07.10.23</i></time></span>
           
 
@@ -238,11 +243,13 @@
           </h1>
 
           <form action="#" method="get">
-            <label for="first-name">Имя:</label><br><br>
-            <input type="text" id="first-name" name="first-name" placeholder="Ваше имя"><br><br>
+            <!-- <label for="first-name">Имя:</label> -->
+          <input type="text" id="first-name" name="first-name" placeholder="Ваше имя">
+            
+            <br><br>
 
-            <label for="email">Email: *</label><br><br>
-            <input type="email" id="email" name="subsc_email" placeholder="Ваш e-mail" required><br><br>
+            <!-- <label for="email">Email: *</label> -->
+            <input type="email" id="email" name="subsc_email" placeholder="Ваш e-mail *" required><br><br>
 
             <input type="submit" value="Submit">
           </form>
@@ -252,7 +259,6 @@
 
 
           <div class="subscribe__logo">
-
           </div>
         </div>
       </section>
@@ -263,7 +269,8 @@
   
   <div class="about-us__block">
     <div class="about-us__block--img">
-      <img src="/Assets/img/freepik/about_us3.jpg" alt="About us">
+      <picture><img src="/Assets/img/freepik/about_us3.jpg" alt="Fists"></picture>
+      
     </div>
     
     <div class="about-us__block--background"></div>
@@ -296,7 +303,7 @@
                 viewBox="0 0 50 50"
                 style="null"
                 fill="white"
-                class="facebook__icon icons8-Facebook-Filled">
+                class="social__icon">
                 <path
                   d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
               </svg>

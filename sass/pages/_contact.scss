@@ -1,0 +1,73 @@
+@use "../utils/colors" as c;
+
+.contact {
+  display: grid;
+  justify-content: center;
+
+  &__info {
+    // background-color: aquamarine;
+    margin-top: calc(6rem + 5vw);
+    // margin-inline: 1.6rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: calc(1.4rem + 5vw);
+    min-width: 80rem;
+    width: 70vw;
+
+    &--form {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 6rem;
+      }
+
+      &-cell {
+        &-message {
+          //   background-color: c.$gold-light3;
+          word-wrap: break-word;
+          resize: vertical;
+          border: none;
+          border-radius: 3px;
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+          padding: 1rem 3rem 1.19rem 1rem;
+
+          &:focus {
+            border: none;
+            background-color: white;
+          }
+        }
+      }
+    }
+
+    &--details {
+      h3 {
+        margin-bottom: 2rem;
+      }
+      //   background-color: beige;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 2.2rem;
+      padding-left: 5vw;
+      padding-top: 10rem;
+    }
+    &--social {
+      margin-top: 4rem;
+      display: flex;
+      gap: 2rem;
+
+      &-icon {
+        // background-color: blueviolet;
+        height: 4rem;
+        width: auto;
+
+        &:hover,
+        &:focus {
+          fill: c.$gold-dark;
+        }
+        &:active {
+          fill: c.$gold-light;
+        }
+      }
+    }
+  }
+}

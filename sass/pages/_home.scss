@@ -14,13 +14,13 @@
 //         padding: 20rem 0;
 //     }
 // }
-
+//--------------BANNER---------
 .home-banner {
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  background-color: pink;
+  // background-color: pink;
   height: auto;
   width: 90%;
   display: grid;
@@ -150,11 +150,15 @@
 .partner-logo {
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
   max-width: 80%;
   display: flex;
   flex: wrap;
   justify-content: space-around;
+
+  @media (max-width: 800px) {
+    margin-bottom: 8rem;
+  }
 
   &__img {
     height: clamp(3rem, 5vw, 5.6rem);
@@ -166,11 +170,12 @@
 //--------------NEWS---------
 
 .news {
+  // background-color: yellow;
   font-family: f.$fontRoboto;
   width: 70%;
   font-size: large;
   margin: 0 auto;
-  margin-bottom: 16rem;
+  margin-bottom: 24rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -180,10 +185,16 @@
   }
 
   &__card {
+    // background-color: pink;
     display: flex;
+    justify-content: center;
     gap: 4rem;
     margin-bottom: 8rem;
     // background-color: pink;
+
+    @media (max-width: 800px) {
+      margin-bottom: 4rem;
+    }
 
     &--img-holder {
       min-height: 100%;
@@ -243,8 +254,8 @@
       -webkit-line-clamp: 3;
       overflow: hidden;
 
-      @media (width <= 1200px) {
-        -webkit-line-clamp: 2;
+      @media (max-width: 800px) {
+        margin-top: -1rem;
       }
     }
   }
@@ -275,7 +286,7 @@
 //--------------ACHIEVEMENTS---------
 .achievements {
   background-color: c.$black;
-  height: 46rem;
+  height: auto;
   width: 100%;
   margin-bottom: 16rem;
   display: grid;
@@ -283,31 +294,52 @@
   align-items: center;
 
   &__block {
-    height: 90%;
+    padding: 8rem 2rem;
+    height: auto;
     width: 70%;
     // background-color: pink;
-    display: flex;
-    gap: 12rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 6rem;
+
+    @media (width <= 1140px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 8rem;
+    }
   }
   &__content {
+    // background-color: yellow;
+
+    height: min-content;
+    min-width: 16rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    justify-content: center;
+    align-items: center;
     text-align: center;
+    text-wrap: balance;
+
     &--icon {
-      height: 5rem;
-      width: auto;
+      height: clamp(3.8rem, 4vw, 6rem);
       margin-bottom: 4rem;
+      @media (width <= 1140px) {
+        margin-bottom: 2rem;
+        min-width: 16rem;
+      }
     }
     &--title {
-      font-size: 2rem;
+      font-size: clamp(1.2rem, 1vw, 1.8rem);
       font-weight: 500;
       color: c.$gold-light;
     }
     &--text {
       color: white;
       font-weight: 1.6rem;
+      font-size: clamp(1.4rem, 1vw, 1.6rem);
+      line-height: 1.5;
+      letter-spacing: 0.4px;
     }
   }
 }
@@ -319,15 +351,24 @@
 
   &__div {
     // background-color: yellow;
-    max-width: 130rem;
-    height: 70rem;
+    max-width: 120rem;
+    height: 60rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.2fr 1fr;
+    padding: 4rem 6rem;
+    gap: 2rem;
+
+    @media (width <= 1100px) {
+      margin-top: -6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
+
   &__form {
-    padding-left: 2.6rem;
+    // padding-left: 2.6rem;
     align-self: center;
     height: 90%;
     // background-color: pink;
@@ -335,18 +376,30 @@
     flex-direction: column;
     justify-content: center;
 
+    @media (width <= 1100px) {
+      order: 2;
+    }
+
     &--title {
-      font-size: 4rem;
+      font-size: clamp(2.8rem, 4vw, 4rem);
       margin-bottom: 6rem;
     }
   }
   &__logo {
     // background-color: skyblue;
-    opacity: 0.2;
-    height: 70%;
+    height: 60%;
     align-self: center;
-    background-image: url(/Assets/img/shogen_club_logoSVG.svg);
+    opacity: 0.85;
+    background-image: url(/Assets/img/shogen_club_logo_blue_SVG.svg);
+    background-position: right;
     background-repeat: no-repeat;
+
+    @media (width <= 1100px) {
+      background-position: center;
+      order: 1;
+      height: 20rem;
+      width: 100%;
+    }
   }
 }
 
@@ -358,10 +411,11 @@
   display: grid;
   grid-template-columns: 1fr 1.18fr;
   gap: 6vw;
-  margin-bottom: 16rem;
+  margin-bottom: 24rem;
   position: relative;
 
   @media (width <= 1330px) {
+    margin-top: 16rem;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -379,7 +433,8 @@
     margin-right: 8rem;
 
     @media (width <= 1330px) {
-      height: 40rem;
+      height: 18vw;
+      min-height: 12rem;
       width: 100%;
       margin: 0;
       border-radius: 0;
@@ -387,17 +442,18 @@
 
     &--img {
       border-radius: 6px;
-      max-width: 70%;
-      min-width: 50rem;
+      overflow: hidden;
+
+      width: clamp(22rem, 36vw, 56rem);
       height: auto;
       position: absolute;
       right: -6.2vw;
       top: 50%;
       transform: translateY(-50%);
-      overflow: hidden;
+
       @media (width <= 1330px) {
-        position: relative;
-        width: 20rem;
+        right: clamp(2.8rem, 7vw, 16rem);
+        margin-left: 10rem;
       }
     }
   }
@@ -409,21 +465,31 @@
     display: grid;
 
     &--title {
-      font-size: 3.2rem;
+      font-size: clamp(2.6rem, 3vw, 3.2rem);
       margin-bottom: 4rem;
+
+      @media (width <= 1330px) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
     &--story {
       max-width: 46ch;
       min-width: 40ch;
-      font-size: min(1.8rem, 1.9vw, 2rem);
+      font-size: min(2.2rem, 3.1vw, 2rem);
       margin-bottom: 6rem;
+
+      @media (width <= 1330px) {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
     }
 
     &--btn {
       color: grey;
       white-space: nowrap;
-      font-size: 1.6rem;
+      font-size: clamp(1.4rem, 1.8vw, 1.8rem);
       padding: 0.5rem;
       width: 18%;
 

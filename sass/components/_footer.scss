@@ -48,12 +48,3 @@ footer {
   }
 }
 
-.facebook__icon {
-  &:hover,
-  &:focus {
-    fill: c.$gold-light;
-  }
-  &:active {
-    fill: c.$gold-dark;
-  }
-}

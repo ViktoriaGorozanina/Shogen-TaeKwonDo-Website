@@ -34,6 +34,7 @@ html {
 
 /* Set core body defaults */
 body {
+  width: 100vw;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -51,6 +52,11 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -59,4 +65,9 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+main {
+  // background-color: yellow;
+  min-height: 100vh;
 }

@@ -1,19 +1,28 @@
 @use "../utils/colors" as c;
 
 form {
+  width: 90%;
   font-size: 1.8rem;
   color: c.$black;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-  padding: 2rem 3rem 0.3rem 0.5rem;
+  padding: 2rem 3rem 0.3rem 0.8rem;
   border: none;
   border-bottom: solid 1px black;
   background-color: none;
+  transition: padding 0.2s;
+
+  &:focus {
+    border: none;
+    padding: 1.19rem 3rem 1.19rem 1rem;
+  }
 }
 input::placeholder {
   font-weight: 200;
-  color: lightgrey;
+  color: rgb(100, 100, 100);
 }
 input[type="submit"] {
   text-transform: uppercase;
@@ -21,20 +30,23 @@ input[type="submit"] {
   letter-spacing: 1.2;
   font-size: 1.8rem;
   background-color: c.$black;
+  width: 25%;
   padding: 1.2rem 4rem;
   border-radius: 4px;
   transition: all 0.2s;
+  border: none;
 
   &:hover,
   &:focus {
     color: c.$gold;
-    background-color: c.$black-light;
+    border: none;
   }
   &:active {
     color: c.$gold-dark;
-    background-color: c.$black;
+    background-color: c.$black-light;
+    // background-color: c.$black;
+    outline: none;
   }
 }
 label {
-  margin-bottom: -2rem;
 }

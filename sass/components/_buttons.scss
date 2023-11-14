@@ -1,3 +1,5 @@
+@use "../utils/colors" as c;
+
 .btn:link,
 .btn:visited {
   outline-color: transparent;
@@ -6,4 +8,14 @@
 .btn:hover,
 .btn:active {
   outline-color: transparent;
+}
+
+.social__icon {
+  &:hover,
+  &:focus {
+    fill: c.$gold-light;
+  }
+  &:active {
+    fill: c.$gold-dark;
+  }
 }

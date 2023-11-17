@@ -2,7 +2,7 @@
 @use "../utils/fonts" as f;
 
 body {
-  font-family: f.$fontOnest;
+  font-family: f.$fontOnest, sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: c.$black;

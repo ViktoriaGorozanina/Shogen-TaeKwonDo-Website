@@ -82,3 +82,15 @@ const visitCount = function () {
 };
 
 visitCountText.textContent = `PAGE VISITED ${visitCount()} TIMES`;
+
+//------------------------------CONTACTS-----------------
+
+const contactsName = document.querySelector(`#name`);
+const contactsEmail = document.querySelector(`#email`);
+const contactsMessage = document.querySelector(`#message`);
+
+window.addEventListener(`load`, function () {
+  contactsName.value = ``;
+  contactsEmail.value = ``;
+  contactsMessage.value = ``;
+});

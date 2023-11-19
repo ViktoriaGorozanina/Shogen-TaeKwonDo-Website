@@ -7,7 +7,7 @@
 
   &__info {
     // background-color: aquamarine;
-    margin-top: calc(6rem + 5vw);
+    margin-top: calc(4rem + 3.6vw);
     margin-bottom: 12rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -18,7 +18,7 @@
     @media (width<=900px) {
       grid-template-columns: 1fr;
       padding-inline: 2rem;
-      min-width: auto;
+      min-width: 70%;
     }
 
     &--form {

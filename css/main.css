@@ -597,6 +597,15 @@ input[type=submit]:active {
   outline: none;
 }
 
+input:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+     -moz-appearance: menulist-button;
+          appearance: menulist-button;
+  background-image: none !important;
+  background-color: -internal-light-dark(white, red) !important;
+  color: fieldtext !important;
+}
+
 .btn:link,
 .btn:visited {
   outline-color: transparent;
@@ -1159,7 +1168,7 @@ input[type=submit]:active {
   justify-items: center;
 }
 .contact__info {
-  margin-top: calc(6rem + 5vw);
+  margin-top: calc(4rem + 3.6vw);
   margin-bottom: 12rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -1170,7 +1179,7 @@ input[type=submit]:active {
   .contact__info {
     grid-template-columns: 1fr;
     padding-inline: 2rem;
-    min-width: auto;
+    min-width: 70%;
   }
 }
 .contact__info--form {

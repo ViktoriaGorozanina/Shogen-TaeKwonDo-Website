@@ -50,12 +50,12 @@
       <div class="ham-menu">
         <ul role="list" class="ham-menu__list">
           <li><a class="ham-menu__item" href="index.html">Главная</a></li>
-          <li><a class="ham-menu__item" href="about-us.html">О нас</a></li>
+          <li><a aria-current="page" class="ham-menu__item" href="#">О нас</a></li>
           <li><a class="ham-menu__item" href="schedule.html">Расписание</a></li>
           <li><a class="ham-menu__item" href="gallery.html">Галерея</a></li>
           <li><a class="ham-menu__item" href="coach.html">Тренер</a></li>
           <li><a class="ham-menu__item" href="paraTKD.html">Para TKD</a></li>
-          <li><a aria-current="page" class="ham-menu__item" href="#">Контакт</a></li>
+          <li><a class="ham-menu__item" href="contact.html">Контакт</a></li>
         </ul>
       </div>
 
@@ -76,12 +76,12 @@
                 >Главная</a
               >
             </li>
-            <li><a class="menu__item" href="about-us.html">О нас</a></li>
+            <li><a aria-current="page" class="menu__item" href="#">О нас</a></li>
             <li><a class="menu__item" href="schedule.html">Расписание</a></li>
             <li><a class="menu__item" href="gallery.html">Галерея</a></li>
             <li><a class="menu__item" href="coach.html">Тренер</a></li>
             <li><a class="menu__item" href="paraTKD.html">Para TKD</a></li>
-            <li><a aria-current="page" class="menu__item" href="#">Контакт</a></li>
+            <li><a class="menu__item" href="contact.html">Контакт</a></li>
           </ul>
         </nav>
 
@@ -97,34 +97,9 @@
   <!-- --------------------MAIN--------------------- -->
 
   <main>
-    <div class="contact">
-        <div class="contact__info">
-
-            <div class="contact__info--form">
-                <h1>Свяжитесь с нами</h1>
-                
-                <form action="https://formspree.io/f/xvojnvra" method="POST">
-                    <!-- <label for="first-name">Имя:</label> -->
-                    <input class="contact__info--form-cell" type="text" id="name" name="first-name" placeholder="Ваше имя *" required>
-                    <br><br>
-                    <!-- <label for="email">Email: *</label> -->
-                    <input 
-                    class="contact__info--form-cell"
-                    type="email" id="email" name="email" placeholder="Ваш e-mail *" required>
-                    <br><br>
-                    <textarea class="contact__info--form-cell-message contact__info--form-cell" name="message" id="message" cols="20" rows="3" placeholder="Сообщение *" required maxlength="1300"></textarea>
-                      
-                    <br><br>
-
-                    <input type="submit" value="Submit" onsubmit="reset()" id="submit">
-                  </form>
-            </div>
+    
             
             <div class="contact__info--details">
-                <h3>Контакты</h3>
-                <span>E-mail: test@gmail.com</span>
-                <span>Телефон: +372 5556688</span>
-                <span>Reg.no: 552266</span>
 
                 <div class="contact__info--social">
                         <a href="https://www.facebook.com/groups/ShogenClub" target="_blank">
@@ -162,41 +137,6 @@
 
             </div>
 
-        </div>
-
-        <div class="contact__maps">
-          
-            <div class="contact__maps--section contact__maps--section-left">
-              
-              <div class="contact__maps--address">
-                <h3>Tallinn</h3>
-                <span>Lasnamäe TaeKwonDo Keskus</span>
-                <span>Linnamäe 37a, 2 korrus</span>
-              </div>
-
-              <div class="contact__maps--mapcontainer">
-                <div class="contact__maps--map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1914.187028070316!2d24.87513294274861!3d59.44957576195652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692ed5acd39a53d%3A0x7bdb8e1bbf5cb129!2sTaekwondo%20keskus!5e0!3m2!1sru!2see!4v1700259810920!5m2!1sru!2see" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-              </div>
-            </div>
-            
-            <div class="contact__maps--section contact__maps--section-right">
-              <div class="contact__maps--address">
-                <h3>Maardu</h3>
-                <span>Maardu Gümnaasium</span>
-                <span>Ringi 64</span>
-              </div>
-
-            <div class="contact__maps--mapcontainer">
-              
-              <div class="contact__maps--map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1204.5439673110225!2d25.0248764392888!3d59.4865398996925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692f204f6079bad%3A0xc1c93e445864311f!2sRingi%2064%2C%20Maardu%2C%2074112%20Harju%20maakond!5e0!3m2!1sru!2see!4v1700260440072!5m2!1sru!2see" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-    </div>
   </main>
 
 

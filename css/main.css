@@ -1329,3 +1329,15 @@ input:-internal-autofill-selected {
 .contact__maps-right {
   margin-right: 4vw;
 }
+
+.red {
+  background-color: pink;
+  height: 20rem;
+  width: 20rem;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 20rem;
+  width: 20rem;
+}

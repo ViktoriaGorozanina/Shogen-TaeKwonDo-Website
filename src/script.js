@@ -89,8 +89,41 @@ const contactsName = document.querySelector(`#name`);
 const contactsEmail = document.querySelector(`#email`);
 const contactsMessage = document.querySelector(`#message`);
 
-window.addEventListener(`load`, function () {
-  contactsName.value = ``;
-  contactsEmail.value = ``;
-  contactsMessage.value = ``;
+// window.addEventListener(`load`, function () {
+//   contactsName.value = ``;
+//   contactsEmail.value = ``;
+//   contactsMessage.value = ``;
+// });
+
+//----------------tabs------------
+
+const tabsContainer = document.querySelector(".tabs-container");
+const tabsList = document.querySelector(".tab-list");
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabPanels = document.querySelectorAll(".tab-panel");
+
+tabButtons.forEach((tab, index) => {
+  if (index === 0) {
+    //
+  } else {
+    tabPanels[index].setAttribute("hidden", "");
+  }
+});
+
+tabsContainer.addEventListener(`click`, (e) => {
+  const clickedTab = e.target.closest(`a`);
+
+  if (!clickedTab) return;
+  // console.log(clickedTab);
+  e.preventDefault();
+
+  const activePanelId = clickedTab.getAttribute(`href`);
+  // console.log(activatePanelId);
+  const activePanel = tabsContainer.querySelector(activePanelId);
+  console.log(activePanel);
+
+  tabPanels.forEach((panel) => {
+    panel.setAttribute(`hidden`, true);
+  });
+  activePanel.removeAttribute(`hidden`, false);
 });

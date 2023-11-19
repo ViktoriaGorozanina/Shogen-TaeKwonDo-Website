@@ -96,45 +96,24 @@
     </div>
   <!-- --------------------MAIN--------------------- -->
 
-  <main>
-    
-            
-            <div class="contact__info--details">
+  <main class="wrapper">
+      <h1 id="tabs-title">TITLE HERE</h1>  
 
-                <div class="contact__info--social">
-                        <a href="https://www.facebook.com/groups/ShogenClub" target="_blank">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              xmlns:xlink="http://www.w3.org/1999/xlink"
-                              version="1.0"
-                              x="0px"
-                              y="0px"
-                              width="30"
-                              height="30"
-                              viewBox="0 0 50 50"
-                              style="null"
-                              fill="black"
-                              class="contact__info--social-icon">
-                              <path
-                                d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
-                            </svg>
-                          </a>
+            <div class="tabs-container">
+              <ul class="tab-list" aria-labelledby="tabs-title">
+                <li><a class="tab-button" id="tab-1" href="#tallinn">Tallinn</a></li>
+                <li><a class="tab-button" id="tab-2" href="#maardu">Maardu</a></li>
+              </ul>
+            </div>
 
-                          <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" 
-                            x="0px" 
-                            y="0px" 
-                            width="30" 
-                            height="30" 
-                            viewBox="0,0,256,256"
-                            style="null"
-                              fill="black"
-                              class="contact__info--social-icon">
-                                <g transform="translate(-42.24,-42.24) scale(1.33,1.33)"><g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M8,3c-2.761,0 -5,2.239 -5,5v8c0,2.761 2.239,5 5,5h8c2.761,0 5,-2.239 5,-5v-8c0,-2.761 -2.239,-5 -5,-5zM18,5c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM12,7c2.761,0 5,2.239 5,5c0,2.761 -2.239,5 -5,5c-2.761,0 -5,-2.239 -5,-5c0,-2.761 2.239,-5 5,-5zM12,9c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z"></path></g></g></g>
-                                </svg>
-                          </a>
-                </div>
+            <div class="tabs__panels flow">
+              <div class="tab-panel" id="tallinn" aria-labelledby="tab-1-tallinn">
+                <div class="red">RED</div>
+              </div>
 
+              <div class="tab-panel" id="maardu" aria-labelledby="tab-2-maardu">
+                <div class="green"></div>
+              </div>
             </div>
 
   </main>
@@ -146,7 +125,7 @@
       <div class="footer__div" id="footer">
         
           <div class="footer__links">
-            <a href="https://www.facebook.com/groups/ShogenClub" target="_blank">
+            <a href="https://www.facebook.com/groups/ShogenClub" target="_blank" aria-label="Link to facebook">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"

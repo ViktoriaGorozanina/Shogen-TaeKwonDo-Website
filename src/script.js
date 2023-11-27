@@ -95,35 +95,55 @@ const contactsMessage = document.querySelector(`#message`);
 //   contactsMessage.value = ``;
 // });
 
-//----------------tabs------------
+//----------------TABS------------
 
 const tabsContainer = document.querySelector(".tabs-container");
 const tabsList = document.querySelector(".tab-list");
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabPanels = document.querySelectorAll(".tab-panel");
 
+//set attribute hidden
 tabButtons.forEach((tab, index) => {
   if (index === 0) {
-    //
+    console.log(`tab 0`);
   } else {
+    tab.setAttribute(`tabindex`, `-1`);
     tabPanels[index].setAttribute("hidden", "");
   }
 });
 
+//swith tab function:
+const switchTab = function (newTab) {
+  const activePanelId = newTab.getAttribute(`href`); //#tallinn for example
+  // console.log(activePanelId);
+  const activePanel = document.querySelector(activePanelId);
+  // console.log(activePanel);
+
+  //switch hidden state true/false
+  tabPanels.forEach((panel) => {
+    panel.setAttribute(`hidden`, true);
+  });
+  activePanel.removeAttribute(`hidden`);
+};
+
+//click event actions:
 tabsContainer.addEventListener(`click`, (e) => {
   const clickedTab = e.target.closest(`a`);
 
   if (!clickedTab) return;
   // console.log(clickedTab);
+  //prevent from anchor link behaviour
   e.preventDefault();
+  switchTab(clickedTab);
+});
 
-  const activePanelId = clickedTab.getAttribute(`href`);
-  // console.log(activatePanelId);
-  const activePanel = tabsContainer.querySelector(activePanelId);
-  console.log(activePanel);
+//(AGP) accessability guidence - keyboard assistance
+tabsList.setAttribute(`role`, `tablist`);
 
-  tabPanels.forEach((panel) => {
-    panel.setAttribute(`hidden`, true);
-  });
-  activePanel.removeAttribute(`hidden`, false);
+tabsList.querySelectorAll(`li`).forEach((listitem) => {
+  listitem.setAttribute(`role`, `presentation`);
+});
+
+tabPanels.forEach((panel) => {
+  panel.setAttribute(`tabindex`, `0`);
 });

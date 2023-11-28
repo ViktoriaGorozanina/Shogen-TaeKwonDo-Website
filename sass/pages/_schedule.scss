@@ -1,9 +1,10 @@
 @use "../utils/colors" as c;
+@use "../utils/fonts" as f;
 
 .tabs-wrapper {
   // background-color: yellow;
   margin-top: calc(4rem + 3.6vw);
-  width: 64vw;
+  width: 54vw;
   margin-inline: auto;
   color: c.$black;
 
@@ -26,26 +27,52 @@
 }
 
 [role="tablist"] {
+  // background-color: yellow;
+  // width: fit-content;
   list-style: none;
   display: flex;
-  gap: 8rem;
+  gap: 6rem;
   margin: 0;
   margin-bottom: 8rem;
   padding: 0;
+  // padding-left: 1rem;
   font-size: 3.2rem;
+  font-family: f.$fontInter;
+  border-bottom: solid 0.7px c.$grey;
+  position: relative;
+}
+
+[role="tablist"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 4px;
+  scale: var(--_width, 0.13) 1;
+  translate: var(--_left, 0px) 0;
+  transform-origin: left;
+  background-color: black;
+  transition: scale, translate 0.3s;
 }
 
 .tab-button {
-  color: c.$black;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
+  color: c.$grey-light;
+  padding-inline: 2rem;
+  transition: all 0.2s;
 
-  // &:focus {
-  //   outline: none;
-  // }
+  &:hover {
+    color: c.$grey;
+  }
+  &:active {
+    color: c.$black;
+  }
 }
 
 [aria-selected="true"] {
-  text-decoration-thickness: 0.2em;
-  color: orange;
+  color: c.$black;
+  &:active,
+  &:hover {
+    color: c.$black;
+  }
 }

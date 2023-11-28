@@ -116,6 +116,8 @@ tabButtons.forEach((tab, index) => {
 
 //swith tab function:
 const switchTab = function (newTab) {
+  const oldTab = tabsContainer.querySelector(`[aria-selected="true"]`);
+
   const activePanelId = newTab.getAttribute(`href`); //#tallinn for example
   // console.log(activePanelId);
   const activePanel = document.querySelector(activePanelId);
@@ -124,18 +126,25 @@ const switchTab = function (newTab) {
     button.setAttribute(`tabindex`, `-1`);
   });
 
-  //switch tabs with arrows:
-  tabsContainer.addEventListener("keydown", (e) => {
-    console.log(e);
-    switch (e.key) {
-      case "ArrowLeft":
-        moveLeft();
-        break;
-      case "ArrowRight":
-        moveRight();
-        break;
-    }
-  });
+  //switch tabs with arrows: (my pc stucks to do this)
+  // tabsContainer.addEventListener("keydown", (e) => {
+  //   switch (e.key) {
+  //     case "ArrowLeft":
+  //       moveLeft();
+  //       break;
+  //     case "ArrowRight":
+  //       moveRight();
+  //       break;
+  // case "Home":
+  //     e.preventDefault();
+  //     switchTab(tabButtons[0]);
+  //     break;
+  //   case "End":
+  //     e.preventDefault();
+  //     switchTab(tabButtons[tabButtons.length - 1]);
+  //     break;
+  //   }
+  // });
 
   function moveLeft() {
     const currentTab = document.activeElement;
@@ -165,6 +174,8 @@ const switchTab = function (newTab) {
   newTab.setAttribute(`aria-selected`, true);
   newTab.setAttribute(`tabindex`, `-1`);
   newTab.focus();
+
+  moveIndicator(oldTab, newTab);
 };
 
 //click event actions:
@@ -189,3 +200,16 @@ tabPanels.forEach((panel) => {
   panel.setAttribute(`role`, `tabpanel`);
   panel.setAttribute(`tabindex`, `0`);
 });
+
+//-------------TABS STYLE----------------
+// move underline:
+function moveIndicator(oldTab, newTab) {
+  const newTabPosition = oldTab.compareDocumentPosition(newTab);
+  console.log(newTabPosition);
+  let transitionWidth;
+
+  // if(newTabPosition === 4)
+  const newTabWidth = newTab.offsetWidth / tabsContainer.offsetWidth;
+  tabsContainer.style.setProperty(`--_left`, newTab.offsetLeft + "px");
+  tabsContainer.style.setProperty(`--_width`, newTabWidth);
+}

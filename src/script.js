@@ -104,8 +104,10 @@ const tabPanels = document.querySelectorAll(".tab-panel");
 
 //set attribute hidden
 tabButtons.forEach((tab, index) => {
+  tab.setAttribute(`role`, `tab`);
+
   if (index === 0) {
-    console.log(`tab 0`);
+    tab.setAttribute(`aria-selected`, `true`);
   } else {
     tab.setAttribute(`tabindex`, `-1`);
     tabPanels[index].setAttribute("hidden", "");
@@ -117,13 +119,52 @@ const switchTab = function (newTab) {
   const activePanelId = newTab.getAttribute(`href`); //#tallinn for example
   // console.log(activePanelId);
   const activePanel = document.querySelector(activePanelId);
-  // console.log(activePanel);
+  tabButtons.forEach((button) => {
+    button.setAttribute(`aria-selected`, false);
+    button.setAttribute(`tabindex`, `-1`);
+  });
+
+  //switch tabs with arrows:
+  tabsContainer.addEventListener("keydown", (e) => {
+    console.log(e);
+    switch (e.key) {
+      case "ArrowLeft":
+        moveLeft();
+        break;
+      case "ArrowRight":
+        moveRight();
+        break;
+    }
+  });
+
+  function moveLeft() {
+    const currentTab = document.activeElement;
+    if (!currentTab.parentElement.previousElementSibling) {
+      switchTab(tabButtons[tabButtons.length - 1]);
+    } else {
+      switchTab(
+        currentTab.parentElement.previousElementSibling.querySelector("a")
+      );
+    }
+  }
+  function moveRight() {
+    const currentTab = document.activeElement;
+    if (!currentTab.parentElement.nextElementSibling) {
+      switchTab(tabButtons[0]);
+    } else {
+      switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+    }
+  }
 
   //switch hidden state true/false
   tabPanels.forEach((panel) => {
     panel.setAttribute(`hidden`, true);
   });
   activePanel.removeAttribute(`hidden`);
+
+  newTab.setAttribute(`aria-selected`, true);
+  newTab.setAttribute(`tabindex`, `-1`);
+  newTab.focus();
 };
 
 //click event actions:
@@ -145,5 +186,6 @@ tabsList.querySelectorAll(`li`).forEach((listitem) => {
 });
 
 tabPanels.forEach((panel) => {
+  panel.setAttribute(`role`, `tabpanel`);
   panel.setAttribute(`tabindex`, `0`);
 });

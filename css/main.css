@@ -24,7 +24,7 @@ p {
 a,
 a:visited,
 a:active {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Box sizing rules */
@@ -1330,6 +1330,18 @@ input:-internal-autofill-selected {
   margin-right: 4vw;
 }
 
+.tabs-wrapper {
+  margin-top: calc(4rem + 3.6vw);
+  width: 64vw;
+  margin-inline: auto;
+  color: #1a1a1a;
+}
+.tabs-wrapper h1 {
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  font-size: 3.4rem;
+}
+
 .red {
   background-color: pink;
   height: 20rem;
@@ -1340,4 +1352,27 @@ input:-internal-autofill-selected {
   background-color: lightgreen;
   height: 20rem;
   width: 20rem;
+}
+
+[role=tablist] {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8rem;
+  margin: 0;
+  margin-bottom: 8rem;
+  padding: 0;
+  font-size: 3.2rem;
+}
+
+.tab-button {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+[aria-selected=true] {
+  text-decoration-thickness: 0.2em;
+  color: orange;
 }

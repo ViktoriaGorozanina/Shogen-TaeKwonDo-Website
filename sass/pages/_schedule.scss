@@ -1,5 +1,19 @@
 @use "../utils/colors" as c;
 
+.tabs-wrapper {
+  // background-color: yellow;
+  margin-top: calc(4rem + 3.6vw);
+  width: 64vw;
+  margin-inline: auto;
+  color: c.$black;
+
+  h1 {
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+  }
+}
+
 .red {
   background-color: pink;
   height: 20rem;
@@ -9,4 +23,29 @@
   background-color: lightgreen;
   height: 20rem;
   width: 20rem;
+}
+
+[role="tablist"] {
+  list-style: none;
+  display: flex;
+  gap: 8rem;
+  margin: 0;
+  margin-bottom: 8rem;
+  padding: 0;
+  font-size: 3.2rem;
+}
+
+.tab-button {
+  color: c.$black;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+
+  // &:focus {
+  //   outline: none;
+  // }
+}
+
+[aria-selected="true"] {
+  text-decoration-thickness: 0.2em;
+  color: orange;
 }

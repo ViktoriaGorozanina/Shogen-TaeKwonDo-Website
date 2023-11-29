@@ -15,20 +15,28 @@
   }
 }
 
-.red {
-  background-color: pink;
-  height: 20rem;
-  width: 20rem;
-}
-.green {
-  background-color: lightgreen;
-  height: 20rem;
-  width: 20rem;
+.tabs-container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.05px;
+    background-color: c.$grey;
+    z-index: -10;
+    // scale: var(--_width, --_tabwidth) 1;
+    // translate: var(--_left, 0px) 0;
+    // transition: scale, translate 0.3s;
+  }
 }
 
 [role="tablist"] {
   // background-color: yellow;
   // width: fit-content;
+  min-width: 41.5rem;
   list-style: none;
   display: flex;
   gap: 6rem;
@@ -36,30 +44,32 @@
   margin-bottom: 8rem;
   padding: 0;
   // padding-left: 1rem;
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
   font-family: f.$fontInter;
-  border-bottom: solid 0.7px c.$grey;
-  position: relative;
+  // position: relative;
 }
 
-[role="tablist"]::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 4px;
-  scale: var(--_width, 0.13) 1;
-  translate: var(--_left, 0px) 0;
-  transform-origin: left;
-  background-color: black;
-  transition: scale, translate 0.3s;
-}
+// [role="tablist"]::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: -2px;
+//   height: 4px;
+//   scale: var(--_width, --_tabwidth) 1;
+//   translate: var(--_left, 0px) 0;
+//   transform-origin: left;
+//   transition: scale, translate 0.3s;
+//   background-color: black;
+//   background-color: black;
+// }
 
 .tab-button {
+  background-color: antiquewhite;
   color: c.$grey-light;
   padding-inline: 2rem;
   transition: all 0.2s;
+  padding-bottom: 0.2rem;
 
   &:hover {
     color: c.$grey;
@@ -71,8 +81,33 @@
 
 [aria-selected="true"] {
   color: c.$black;
+  transform-origin: left;
+  transition: scale 2s;
+  position: relative;
+
   &:active,
   &:hover {
     color: c.$black;
   }
+
+  &::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 4px;
+  }
+}
+
+.red {
+  background-color: pink;
+  height: 20rem;
+  width: 20rem;
+}
+.green {
+  background-color: lightgreen;
+  height: 20rem;
+  width: 20rem;
 }

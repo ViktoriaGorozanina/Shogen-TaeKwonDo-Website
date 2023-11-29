@@ -9,7 +9,16 @@ const hamMenu = document.querySelector(`.ham-menu`);
 const hamList = document.querySelector(`.ham-menu__list`);
 
 //HAM MENU TOGGLE (icon and list)
+hamMenu.setAttribute(`hidden`, true);
+
 const toggleHam = hamIcon.addEventListener(`click`, function () {
+  //toggle hidden hem menu
+  if (hamMenu.getAttribute(`hidden`) === `true`) {
+    hamMenu.removeAttribute(`hidden`);
+  } else {
+    hamMenu.setAttribute(`hidden`, true);
+  }
+
   //reverse ham animation
   if (hamMenu.classList.contains(`ham-open`)) {
     midHam.classList.remove(`fade`);
@@ -202,6 +211,10 @@ tabPanels.forEach((panel) => {
 });
 
 //-------------TABS STYLE----------------
+
+// Call the function when the page loads
+window.addEventListener("load", setInitialUnderlineWidth);
+
 // move underline:
 function moveIndicator(oldTab, newTab) {
   const newTabPosition = oldTab.compareDocumentPosition(newTab);
@@ -213,3 +226,9 @@ function moveIndicator(oldTab, newTab) {
   tabsContainer.style.setProperty(`--_left`, newTab.offsetLeft + "px");
   tabsContainer.style.setProperty(`--_width`, newTabWidth);
 }
+
+//activating border bottom:
+// function underline () {
+// if()
+// }
+// underline()

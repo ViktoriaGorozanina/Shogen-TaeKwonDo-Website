@@ -72,6 +72,13 @@ document.addEventListener(`click`, function (event) {
     hamMenu.classList.remove(`ham-open`);
   }
 });
+//---------------BANNER-----------------
+
+const shine = document.querySelector(`.home-banner__text`);
+
+setTimeout(() => {
+  shine.classList.add(`home-banner__shine`);
+}, 1000);
 
 //---------------FOOTER-----------------
 const visitCountText = document.querySelector(`.visit-count`);
@@ -125,7 +132,7 @@ tabButtons.forEach((tab, index) => {
 
 //swith tab function:
 const switchTab = function (newTab) {
-  const oldTab = tabsContainer.querySelector(`[aria-selected="true"]`);
+  // const oldTab = tabsContainer.querySelector(`[aria-selected="true"]`);
 
   const activePanelId = newTab.getAttribute(`href`); //#tallinn for example
   // console.log(activePanelId);
@@ -184,7 +191,7 @@ const switchTab = function (newTab) {
   newTab.setAttribute(`tabindex`, `-1`);
   newTab.focus();
 
-  moveIndicator(oldTab, newTab);
+  // moveIndicator(oldTab, newTab);
 };
 
 //click event actions:
@@ -212,23 +219,49 @@ tabPanels.forEach((panel) => {
 
 //-------------TABS STYLE----------------
 
-// Call the function when the page loads
-window.addEventListener("load", setInitialUnderlineWidth);
-
 // move underline:
-function moveIndicator(oldTab, newTab) {
-  const newTabPosition = oldTab.compareDocumentPosition(newTab);
-  console.log(newTabPosition);
-  let transitionWidth;
+// function moveIndicator(oldTab, newTab) {
+//   const newTabPosition = oldTab.compareDocumentPosition(newTab);
+//   console.log(newTabPosition);
+//   let transitionWidth;
 
-  // if(newTabPosition === 4)
-  const newTabWidth = newTab.offsetWidth / tabsContainer.offsetWidth;
-  tabsContainer.style.setProperty(`--_left`, newTab.offsetLeft + "px");
-  tabsContainer.style.setProperty(`--_width`, newTabWidth);
-}
+//   // if(newTabPosition === 4)
+//   const newTabWidth = newTab.offsetWidth / tabsContainer.offsetWidth;
+//   tabsContainer.style.setProperty(`--_left`, newTab.offsetLeft + "px");
+//   tabsContainer.style.setProperty(`--_width`, newTabWidth);
+// }
 
 //activating border bottom:
-// function underline () {
-// if()
-// }
-// underline()
+const tab1 = document.querySelector(`#tab-1`);
+const tab2 = document.querySelector(`#tab-2`);
+const selected = tabsContainer.querySelector(`[aria-selected="true"]`);
+
+tabsList.addEventListener(
+  `click`,
+  function (e) {
+    console.log(e);
+    const tabId = e.target.id;
+    console.log(tabId);
+
+    let clickedTabAttr = null;
+
+    for (let i = 0; i < e.target.attributes.length; i++) {
+      if (e.target.attributes[i].name === "aria-selected") {
+        clickedTabAttr = e.target.attributes[i].value;
+        break; // Exit loop once found
+      }
+    }
+    console.log(clickedTabAttr);
+
+    if (!clickedTabAttr === `true`) {
+      // console.log(`hey`);
+      if (tabId === `tab-1`) {
+        console.log(`from right`);
+      }
+      if (tabId === `tab-2`) {
+        console.log(`from left`);
+      }
+    }
+  }
+  // selected.style.transformOrigin = `right`;
+);

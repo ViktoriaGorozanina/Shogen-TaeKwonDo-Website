@@ -85,7 +85,8 @@
     background-clip: text;
     -webkit-background-clip: text;
     position: relative;
-
+  }
+  &__shine {
     &::before {
       z-index: +6;
       content: "";

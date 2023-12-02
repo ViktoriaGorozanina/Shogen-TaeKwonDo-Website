@@ -217,6 +217,35 @@ tabPanels.forEach((panel) => {
   panel.setAttribute(`tabindex`, `0`);
 });
 
+//arrow keys selector:
+const tab1 = document.querySelector(`#tab-1`);
+const tab2 = document.querySelector(`#tab-2`);
+
+tab1.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") {
+    e.preventDefault(); // Prevent default behavior
+    tab2.focus(); // Set focus on tab-2
+    simulateTabClick(tab2);
+  }
+});
+
+tab2.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    e.preventDefault(); // Prevent default behavior
+    tab1.focus(); // Set focus on tab-1.
+    simulateTabClick(tab1);
+  }
+});
+
+function simulateTabClick(tab) {
+  const clickEvent = new MouseEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+  });
+  tab.dispatchEvent(clickEvent);
+}
+
 //-------------TABS STYLE----------------
 
 // move underline:
@@ -231,37 +260,37 @@ tabPanels.forEach((panel) => {
 //   tabsContainer.style.setProperty(`--_width`, newTabWidth);
 // }
 
-//activating border bottom:
-const tab1 = document.querySelector(`#tab-1`);
-const tab2 = document.querySelector(`#tab-2`);
-const selected = tabsContainer.querySelector(`[aria-selected="true"]`);
+//activating underline on click:
 
-tabsList.addEventListener(
-  `click`,
-  function (e) {
-    console.log(e);
-    const tabId = e.target.id;
-    console.log(tabId);
+tabsList.addEventListener(`click`, function (e) {
+  console.log(e);
+  const tabId = e.target.id;
+  // console.log(tabId);
 
-    let clickedTabAttr = null;
+  let clickedTabAttr = `false`;
 
-    for (let i = 0; i < e.target.attributes.length; i++) {
-      if (e.target.attributes[i].name === "aria-selected") {
-        clickedTabAttr = e.target.attributes[i].value;
-        break; // Exit loop once found
-      }
-    }
-    console.log(clickedTabAttr);
-
-    if (!clickedTabAttr === `true`) {
-      // console.log(`hey`);
-      if (tabId === `tab-1`) {
-        console.log(`from right`);
-      }
-      if (tabId === `tab-2`) {
-        console.log(`from left`);
-      }
+  for (let i = 0; i < e.target.attributes.length; i++) {
+    if (e.target.attributes[i].name === "aria-selected") {
+      clickedTabAttr = e.target.attributes[i].value;
+      break; // Exit loop once found
     }
   }
-  // selected.style.transformOrigin = `right`;
-);
+  console.log(clickedTabAttr);
+
+  if (clickedTabAttr === `false`) {
+    const underline1 = document.querySelector(`.underline-1`);
+    const underline2 = document.querySelector(`.underline-2`);
+    if (tabId === `tab-1`) {
+      console.log(`from right`);
+      underline1.classList.add(`underline-right`);
+      // underline.style.removeProperty("left");
+      // underline.style.setProperty("right", "0");
+    }
+    if (tabId === `tab-2`) {
+      console.log(`from left`);
+      underline2.classList.add(`underline-left`);
+      // underline.style.removeProperty("right");
+      // underline.style.setProperty("left", "0");
+    }
+  }
+});

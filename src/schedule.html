@@ -41,7 +41,7 @@
 
     <link rel="preload" href="" as="image" fetchpriority=high>
 
-    <title>ShogenClub | Home</title>
+    <title>ShogenClub | Schedule</title>
   </head>
 
   <body>
@@ -50,11 +50,11 @@
       <div class="ham-menu">
         <ul role="list" class="ham-menu__list">
           <li><a class="ham-menu__item" href="index.html">Главная</a></li>
-          <li><a aria-current="page" class="ham-menu__item" href="#">О нас</a></li>
-          <li><a class="ham-menu__item" href="#">Расписание</a></li>
-          <li><a class="ham-menu__item" href="#">Галерея</a></li>
-          <li><a class="ham-menu__item" href="#">Тренер</a></li>
-          <li><a class="ham-menu__item" href="#">Para TKD</a></li>
+          <li><a class="ham-menu__item" href="about-us.html">О нас</a></li>
+          <li><a aria-current="page" class="ham-menu__item" href="#">Расписание</a></li>
+          <li><a class="ham-menu__item" href="gallery.html">Галерея</a></li>
+          <li><a class="ham-menu__item" href="coach.html">Тренер</a></li>
+          <li><a class="ham-menu__item" href="paraTKD.html">Para TKD</a></li>
           <li><a class="ham-menu__item" href="contact.html">Контакт</a></li>
         </ul>
       </div>
@@ -76,16 +76,16 @@
                 >Главная</a
               >
             </li>
-            <li><a aria-current="page" class="menu__item" href="#">О нас</a></li>
-            <li><a class="menu__item" href="#">Расписание</a></li>
-            <li><a class="menu__item" href="#">Галерея</a></li>
-            <li><a class="menu__item" href="#">Тренер</a></li>
-            <li><a class="menu__item" href="#">Para TKD</a></li>
+            <li><a class="menu__item" href="about-us.html">О нас</a></li>
+            <li><a aria-current="page" class="menu__item" href="#">Расписание</a></li>
+            <li><a class="menu__item" href="gallery.html">Галерея</a></li>
+            <li><a class="menu__item" href="coach.html">Тренер</a></li>
+            <li><a class="menu__item" href="paraTKD.html">Para TKD</a></li>
             <li><a class="menu__item" href="contact.html">Контакт</a></li>
           </ul>
         </nav>
 
-        <a href="#" class="ham-nav">
+        <a href="index.html" class="ham-nav">
           <div class="ham-nav__icon">
             <div class="ham-nav__el ham-nav__el--top"></div>
             <div class="ham-nav__el ham-nav__el--middle"></div>
@@ -97,24 +97,86 @@
   <!-- --------------------MAIN--------------------- -->
 
   <main class="tabs-wrapper">
-      <h1 id="tabs-title">Расписание</h1>  
+          <div class="tabs">
+              <h1 id="tabs-title">Расписание</h1>  
 
-            <div class="tabs-container">
-              <ul class="tab-list" aria-labelledby="tabs-title">
-                <li><a class="tab-button" id="tab-1" href="#tallinn">Tallinn<div class="underline underline-1"></div></a>
-                </li>
-                <li><a class="tab-button" id="tab-2" href="#maardu">Maardu<div class="underline underline-2"></div></a></li>
-              </ul>
-            </div>
+              <div class="tabs-container">
+                <ul class="tab-list" aria-labelledby="tabs-title">
+                  <li><a class="tab-button" id="tab-1" href="#tallinn">Tallinn<div class="underline underline-1"></div></a></li>
+                  <li><a class="tab-button" id="tab-2" href="#maardu">Maardu<div class="underline underline-2"></div></a></li>
+                </ul>
+              </div>
+          </div>
+      
+
+
 
             <div class="tabs__panels flow">
               <div class="tab-panel" id="tallinn" aria-labelledby="tab-1-tallinn">
-                <div class="red">TALLINN</div>
+                <div class="table">
+
+                    <div class="group group__empty"></div>
+                    <div class="group group__wt">WT</div>
+                    <div class="group group__3">3-6 лет</div>
+                    <div class="group group__7">7-10 лет</div>
+                    <div class="group group__11">11+ лет</div>
+
+
+
+                      <ul class="row days">
+                        <li class="cell times__week--day1">Пон</li>
+                        <li class="cell times__week--day2">Вт</li>
+                        <li class="cell times__week--day3">Ср</li>
+                        <li class="cell times__week--day4">Чт</li>
+                        <li class="cell times__week--day5">Пт</li>
+                        <li class="cell times__week--day6">Сб</li>
+                        <li class="cell cell__0 times__week--day7">Вск</li>
+                      </ul>
+
+                    <ul class="row row__1 times__wt"><li class="cell">16.30-18.00</li>
+                      <li class="cell">-</li>
+                      <li class="cell">16.30-18.00</li>
+                      <li class="cell">-</li>
+                      <li class="cell">16.30-18.00</li>
+                      <li class="cell">-</li>
+                      <li class="cell cell__0">-</li></ul>
+
+                    <ul class="row row__1 times__3"><li class="cell times__week--day1">18.00-18.30</li>
+                        <li class="cell times__week--day2">-</li>
+                        <li class="cell times__week--day3">18.00-18.30</li>
+                        <li class="cell times__week--day4">-</li>
+                        <li class="cell times__week--day5">18.00-18.30</li>
+                        <li class="cell times__week--day6">-</li>
+                        <li class="cell cell__0 times__week--day7">-</li></ul>
+
+                    <ul class="row row__1 times__7"><li class="cell times__week--day1">18.30-19.30</li>
+                        <li class="cell times__week--day2">-</li>
+                        <li class="cell times__week--day3">18.30-19.30</li>
+                        <li class="cell times__week--day4">-</li>
+                        <li class="cell times__week--day5">18.30-19.30</li>
+                        <li class="cell times__week--day6">-</li>
+                        <li class="cell cell__0 times__week--day7">-</li></ul>
+
+                    <ul class="row row__0 times__11"><li class="cell times__week--day1">19.30-21.00</li>
+                        <li class="cell times__week--day2">-</li>
+                        <li class="cell times__week--day3">19.30-21.00</li>
+                        <li class="cell times__week--day4">-</li>
+                        <li class="cell times__week--day5">19.30-21.00</li>
+                        <li class="cell times__week--day6">-</li>
+                        <li class="cell cell__0 times__week--day7">-</li></ul>
+
+
+                </div>
               </div>
 
               <div class="tab-panel" id="maardu" aria-labelledby="tab-2-maardu">
                 <div class="green">MAARDU</div>
               </div>
+            </div>
+
+            <div class="notes">
+              <p>WT - World Taekwondo (WT, formerly the World Taekwondo Federation (WTF)) is the international federation governing the sport of taekwondo and para-taekwondo.  </p>
+              <p>*В расписании указана базовая сетка тренирвок. Время и место тренировок может меняться.</p>
             </div>
 
   </main>

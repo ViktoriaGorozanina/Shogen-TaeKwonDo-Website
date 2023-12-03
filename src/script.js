@@ -248,20 +248,7 @@ function simulateTabClick(tab) {
 
 //-------------TABS STYLE----------------
 
-// move underline:
-// function moveIndicator(oldTab, newTab) {
-//   const newTabPosition = oldTab.compareDocumentPosition(newTab);
-//   console.log(newTabPosition);
-//   let transitionWidth;
-
-//   // if(newTabPosition === 4)
-//   const newTabWidth = newTab.offsetWidth / tabsContainer.offsetWidth;
-//   tabsContainer.style.setProperty(`--_left`, newTab.offsetLeft + "px");
-//   tabsContainer.style.setProperty(`--_width`, newTabWidth);
-// }
-
 //activating underline on click:
-
 tabsList.addEventListener(`click`, function (e) {
   console.log(e);
   const tabId = e.target.id;
@@ -281,16 +268,10 @@ tabsList.addEventListener(`click`, function (e) {
     const underline1 = document.querySelector(`.underline-1`);
     const underline2 = document.querySelector(`.underline-2`);
     if (tabId === `tab-1`) {
-      console.log(`from right`);
       underline1.classList.add(`underline-right`);
-      // underline.style.removeProperty("left");
-      // underline.style.setProperty("right", "0");
     }
     if (tabId === `tab-2`) {
-      console.log(`from left`);
       underline2.classList.add(`underline-left`);
-      // underline.style.removeProperty("right");
-      // underline.style.setProperty("left", "0");
     }
   }
 });

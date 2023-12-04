@@ -3,19 +3,21 @@
 
 .tabs-wrapper {
   // background-color: yellow;
-  margin-top: calc(5rem + 4.2vw);
+  margin-top: calc(6rem + 4.6vw);
   max-width: 54vw;
   margin-inline: auto;
   color: c.$black;
   display: grid;
-  grid-template-columns: 0.3fr 1.2fr;
+  justify-content: center;
+  grid-template-columns: 0.25fr 1.2fr;
   margin-bottom: 24rem;
   grid-template-rows: min-content max-content min-content;
 
   h1 {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
+    padding-left: 2rem;
     text-transform: uppercase;
-    font-size: 3.4rem;
+    font-size: clamp(2.4rem, 2.8vw, 3.4rem);
   }
 }
 .tabs {
@@ -27,16 +29,16 @@
   position: relative;
   min-width: 32rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 2px;
-    height: 0.5px;
-    background-color: black;
-    z-index: -10;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 2px;
+  //   height: 0.5px;
+  //   background-color: c.$grey-dark;
+  //   z-index: -10;
+  // }
 }
 
 [role="tablist"] {
@@ -45,11 +47,11 @@
   min-width: 41.5rem;
   list-style: none;
   display: flex;
-  gap: 6rem;
+  gap: clamp(2.6rem, 3.6vw, 6rem);
   margin: 0;
   margin-bottom: 6rem;
   padding: 0;
-  font-size: clamp(2.6rem, 3vw, 3.2rem);
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
   font-family: f.$fontInter;
 }
 
@@ -71,7 +73,7 @@
 
 .underline {
   position: absolute;
-  background-color: black;
+  background-color: c.$black-light;
   bottom: -2px;
   height: 4px;
   right: 0;
@@ -104,29 +106,31 @@
   display: grid;
   grid-template-columns: 0.25fr 1.2fr;
   grid-template-rows: repeat(5, 5fr);
-  font-size: 1.8rem;
-  margin-bottom: 4rem;
+  font-size: clamp(1.3rem, 1.4vw, 1.8rem);
+  margin-bottom: 2rem;
   font-family: f.$fontInter; // padding-top: 2rem;
   .group {
-    padding-right: 6rem;
+    padding-right: clamp(2rem, 3vw, 6rem);
     text-align: end;
     align-self: center;
     font-weight: 600;
+    white-space: nowrap;
+
     // padding-bottom: 2rem;
-    &__wt {
+    &__3 {
       grid-row: 2/3;
       grid-column: 1/2;
     }
-    &__3 {
+    &__7 {
       grid-row: 3/4;
       grid-column: 1/2;
     }
-    &__7 {
+    &__11 {
       grid-row: 4/5;
       grid-column: 1/2;
     }
-    &__11 {
-      grid-row: 5/-1;
+    &__wt {
+      grid-row: 5/6;
       grid-column: 1/2;
     }
   }
@@ -138,12 +142,12 @@
     // background-color: blueviolet;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid c.$grey-dark;
     // white-space: nowrap;
-    grid-template-rows: subgrid;
+    // grid-template-rows: subgrid;
 
     &__1 {
-      border-bottom: 1px solid black;
+      border-bottom: 1.5px solid c.$grey-dark;
     }
     &__0 {
       border-bottom: none;
@@ -151,8 +155,9 @@
   }
   .cell {
     // background-color: white;
-    border-right: 1px solid black;
+    border-right: 1.5px solid c.$grey-light;
     text-align: center;
+    align-self: stretch;
     padding-top: 2rem;
     padding-bottom: 2rem;
 
@@ -167,12 +172,6 @@
   margin-bottom: 8rem;
   grid-column: 1/3;
   grid-row: 2/3;
-}
-
-.green {
-  background-color: lightgreen;
-  // height: 20rem;
-  // width: 20rem;
 }
 
 //----------NOTES-------

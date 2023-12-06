@@ -7,8 +7,8 @@
 
   &__info {
     // background-color: aquamarine;
-    margin-top: calc(4rem + 3.6vw);
-    margin-bottom: 16rem;
+    margin-top: calc(6rem + 4.8vw);
+    margin-bottom: 12rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     // gap: calc(0.5rem + 4vw);
@@ -68,7 +68,7 @@
 
       font-size: clamp(2rem, 1.8vw, 2.2rem);
       padding-left: clamp(0.2rem, 5vw, 18rem);
-      padding-top: 11rem;
+      padding-top: 14rem;
       padding-right: 1rem;
 
       @media (width<=900px) {
@@ -86,13 +86,14 @@
         // background-color: blueviolet;
         height: 4rem;
         width: auto;
+        transition: all 0.2s;
 
         &:hover,
         &:focus {
-          fill: c.$gold-dark;
+          fill: c.$gold-light;
         }
         &:active {
-          fill: c.$gold-light;
+          fill: c.$gold-dark;
         }
       }
     }

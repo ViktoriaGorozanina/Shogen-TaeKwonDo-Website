@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: Spy;
-  src: url(/Assets/SpyFont/spyagencyv3laser.ttf);
+  src: url(/src/SpyFont/spyagencyv3laser.ttf);
 }
 // .section-about {
 //     background-color: $color-grey-light-1;
@@ -73,7 +73,7 @@
     width: min(110rem, 50vw);
     text-wrap: balance;
 
-    font-family: Spy, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Spy, sans-serif;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     padding-right: max(1rem, 5%);
@@ -203,7 +203,7 @@
       aspect-ratio: 16 / 9;
       border-radius: 6px;
       overflow: hidden;
-      background-image: url("/Assets/img/img_placeholder.png");
+      background-image: url("/src/img/img_placeholder.png");
       background-size: cover;
       background-position: center;
       display: block;
@@ -391,7 +391,7 @@
     height: 60%;
     align-self: center;
     opacity: 0.85;
-    background-image: url(/Assets/img/shogen_club_logo_blue_SVG.svg);
+    background-image: url(/src/img/shogen_club_logo_blue_SVG.svg);
     background-position: right;
     background-repeat: no-repeat;
 

@@ -15,7 +15,7 @@
 
   h1 {
     margin-bottom: 8rem;
-    padding-left: 2rem;
+    // padding-left: 2rem;
     text-transform: uppercase;
     font-size: clamp(2.4rem, 2.8vw, 3.4rem);
   }
@@ -59,7 +59,7 @@
   // background-color: antiquewhite;
   position: relative;
   color: c.$grey-light;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-bottom: 0.2rem;
   transition: all 0.2s;
 
@@ -108,7 +108,7 @@
   grid-template-rows: repeat(5, 5fr);
   font-size: clamp(1.3rem, 1.4vw, 1.8rem);
   margin-bottom: 2rem;
-  font-family: f.$fontInter; // padding-top: 2rem;
+  font-family: f.$fontInter;
   .group {
     padding-right: clamp(2rem, 3vw, 6rem);
     text-align: end;
@@ -116,7 +116,6 @@
     font-weight: 600;
     white-space: nowrap;
 
-    // padding-bottom: 2rem;
     &__3 {
       grid-row: 2/3;
       grid-column: 1/2;
@@ -143,8 +142,6 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     border-bottom: 2px solid c.$grey-dark;
-    // white-space: nowrap;
-    // grid-template-rows: subgrid;
 
     &__1 {
       border-bottom: 1.5px solid c.$grey-dark;

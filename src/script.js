@@ -51,7 +51,7 @@ const toggleHam = hamIcon.addEventListener(`click`, function () {
   }
 });
 
-//close menu on click even out of the ham nav menu
+//close menu on click out of the ham nav menu
 document.addEventListener(`click`, function (event) {
   if (
     !hamMenu.contains(event.target) &&
@@ -162,26 +162,27 @@ const switchTab = function (newTab) {
   //   }
   // });
 
-  function moveLeft() {
-    const currentTab = document.activeElement;
-    if (!currentTab.parentElement.previousElementSibling) {
-      switchTab(tabButtons[tabButtons.length - 1]);
-    } else {
-      switchTab(
-        currentTab.parentElement.previousElementSibling.querySelector("a")
-      );
-    }
-  }
-  function moveRight() {
-    const currentTab = document.activeElement;
-    if (!currentTab.parentElement.nextElementSibling) {
-      switchTab(tabButtons[0]);
-    } else {
-      switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
-    }
-  }
+  // function moveLeft() {
+  //   const currentTab = document.activeElement;
+  //   if (!currentTab.parentElement.previousElementSibling) {
+  //     switchTab(tabButtons[tabButtons.length - 1]);
+  //   } else {
+  //     switchTab(
+  //       currentTab.parentElement.previousElementSibling.querySelector("a")
+  //     );
+  //   }
+  // }
+  // function moveRight() {
+  //   const currentTab = document.activeElement;
+  //   if (!currentTab.parentElement.nextElementSibling) {
+  //     switchTab(tabButtons[0]);
+  //   } else {
+  //     switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+  //   }
+  // }
 
   //switch hidden state true/false
+
   tabPanels.forEach((panel) => {
     panel.setAttribute(`hidden`, true);
   });

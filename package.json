@@ -1,20 +1,19 @@
 {
-  "name": "shogen_club_taekwondo",
+  "name": "shogen-website",
   "version": "1.0.0",
-  "description": "sports club website",
-  "main": "index.html",
+  "browserslist": "last 2 versions, > 0.5% and ie >= 11",
+  "description": "",
+  "main": "src/script.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ViktoriaGorozanina/Shogen-TaeKwonDo-Website.git"
+    "start": "parcel src/script.js",
+    "build": "parcel build src/script.js"
   },
   "author": "Victoria Gorozanina",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ViktoriaGorozanina/Shogen-TaeKwonDo-Website/issues"
+  "devDependencies": {
+    "parcel": "^2.10.3"
   },
-  "homepage": "https://github.com/ViktoriaGorozanina/Shogen-TaeKwonDo-Website#readme"
+  "dependencies": {
+    "core-js": "^3.34.0"
+  }
 }

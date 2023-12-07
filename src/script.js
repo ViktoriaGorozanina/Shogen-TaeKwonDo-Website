@@ -1,4 +1,5 @@
 "use strict";
+import "core-js/actual";
 
 const hamIcon = document.querySelector(".ham-nav");
 const navMenu = document.querySelector(`.nav-menu`);
